@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Michael Hitchens &mdash; Portfolio</title>
+<style>
+body {
+    /*seamless paper texture from subtlepatterns.com */
+    background-image: url('seamless_paper_texture.png');
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+div.hrbottom {
+    margin: 0px;
+    height: 2px;
+
+    margin-bottom: 2em;
+
+    border-top: 2px;
+    border-top-style: solid;
+    border-top-color: black;
+
+    border-bottom: 2px;
+    border-bottom-style: dashed;
+    border-bottom-color: black;
+}
+div.hrtop {
+    margin: 0px;
+    height: 2px;
+
+    margin-top: 2em;
+
+    border-top: 2px;
+    border-top-style: dashed;
+    border-top-color: black;
+
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+div.textbody {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+p.linkbar {
+    text-align: center;
+    margin: 0.4em
+}
+
+a:link, a:visited, a:active {
+    color: #000000;
+}
+a:hover {
+    color: #999999;
+}
+
+table.projectbox {
+    padding: 0.2em;
+
+    border-top: 2px solid black;
+    border-bottom: 2px dashed black;
+}
+td.text {
+    vertical-align: top;
+}
+td.text h3 {
+    margin: 0px;
+}
+td.text p {
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+
+table.projectboxtop {
+    padding: 0.2em;
+    border-top: 2px dotted black;
+}
+table.projectboxbot {
+    padding: 0.2em;
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+}
+
+
+
+</style>
+</head>
+
+<body>
+<div class="textbody">
+
+<header>
+    <h1 style="padding-top:1em; margin-bottom:0px;">Michael Hitchens</h1>
+    <p style="text-align:center; margin:0px;">Third year Computer Science student at the University of Waterloo</p>
+</header>
+
+<nav>
+    <div class="hrtop"></div>
+    <p class="linkbar">
+        <a href="http://blackforestprogramming.tumblr.com">Blog</a> &#8226;
+        <a href="http://twitter.com/blackforestprog">Twitter</a> &#8226;
+        <a href="https://github.com/footballhead">GitHub</a> &#8226;
+        <a href="https://plus.google.com/u/0/103557452275219213684/posts">Google+</a> &#8226;
+        <a href="https://soundcloud.com/michael-hitchens">SoundCloud</a> &#8226;
+        <a href="https://www.youtube.com/user/Lan1324">YouTube</a> &#8226;
+        Resources &#8226;
+        Contact
+    </p>
+    <div class="hrbottom"></div>
+</nav>
+
+<main>
+    <h2>Games</h2>
+    <table class="projectboxtop"><tr>
+        <td>
+            <img src="snake.png">
+        </td>
+        <td class="text">
+            <h3>SDL Snake</h3>
+            <p>It's snake! Made in C! Using SDL! Programmed in one weekend in May 2013. Windows download requires the Visual C++ 2012 Redistributable which can be found <a href="http://www.microsoft.com/en-ca/download/details.aspx?id=30679">here</a>. Can be compiled for Linux and Mac; tested under Wine 1.7.25.</p>
+            <p><a href="https://github.com/footballhead/sdl-snake">Source</a> &#8226; <a href="https://dl.dropboxusercontent.com/u/17927728/sdl-snake.zip">Windows</a></p>
+        </td>
+    </tr></table>
+    <table class="projectboxtop"><tr>
+        <td class="text">
+            <h3>GM Minesweeper (Easy)</h3>
+            <p>I like Minesweeper so I tried to make my own. I only implemented the easy difficulty. Made using Game Maker; released April 2009 on the YoYo Games Sandbox for Windows. Works with Wine 1.7.25.</p>
+            <p><a href="https://dl.dropboxusercontent.com/u/17927728/GM_Minesweeper_Source.zip">Source</a> &#8226; <a href="https://dl.dropboxusercontent.com/u/17927728/gm_minesweeper.zip">Windows</a></p>
+        </td>
+        <td>
+            <img src="minesweeper.png">
+        </td>
+    </tr></table>
+    <table class="projectboxtop"><tr>
+        <td>
+            <img src="portal-gm.png">
+        </td>
+        <td class="text">
+            <h3>Portal GM: Pre-Slice</h3>
+            <p>Portal is my favourite video game so I tried to make a 2D version. There's no sound because I didn't know about SFXR back then. Made with GameMaker. Previously hosted on the YoYo Games Sandbox. Released May 2008. Only compiled for Windows, but works under Wine 1.7.25.</p>
+            <p><a href="https://dl.dropboxusercontent.com/u/17927728/Portal_GM_Source.zip">Source</a> &#8226; <a href="https://dl.dropboxusercontent.com/u/17927728/portal_gm_pre_slice.zip">Windows</a></p>
+        </td>
+    </tr></table>
+    <table class="projectboxbot"><tr>
+        <td class="text">
+            <h3>SnakeMan</h3>
+            <p>The result of combining certain elements of Snake and Pacman into one game. Made with GameMaker; released February 2008 on the YoYo Games Sandbox for Windows. Only compiled for Windows, but works under Wine 1.7.25.</p>
+            <p><a href="https://dl.dropboxusercontent.com/u/17927728/snakeman.zip">Windows &amp; Source</a></p>
+        </td>
+        <td>
+            <img src="snakeman.png">
+        </td>
+    </tr></table>
+
+    <h2><a href="http://www.ludumdare.com">Ludum Dare</a> Entries</h2>
+    <table class="projectboxtop"><tr>
+        <td>
+            <img src="iccc.png">
+        </td>
+        <td class="text">
+            <h3>ICCC (LD30)</h3>
+            <p>Work for the (I)nternational (C)ommunication (C)onstruction and (C)onsulting! Use communication to spread your political agenda by connecting the world with the internet and shoving your message down the pipe! Beware of your demanding company, bankruptcy, and easy to piss off locals! Made in 72 hours for Ludum Dare 30.</p>
+            <p><a href="https://github.com/footballhead/ld30">Source</a> &#8226; <a href="http://www.ludumdare.com/compo/ludum-dare-30/?action=preview&uid=16438">Entry page</a></p>
+        </td>
+    </tr></table>
+    <table class="projectboxtop"><tr>
+        <td class="text">
+            <h3>FAILED ENTRY (LD26)</h3>
+            <p>This was going to be my entry for Ludum Dare 26 until I backed out. It was not submitted and it was not scored. I'd love to finish it some day.</p>
+            <p><a href="https://github.com/footballhead/ld26">Source</a></p>
+        </td>
+        <td>
+            <img src="ld26.png">
+        </td>
+    </tr></table>
+    <table class="projectboxbot"><tr>
+        <td>
+            <img src="ld24.png">
+        </td>
+        <td class="text">
+            <h3>Evolution is the Key (LD24)</h3>
+            <p>You are trapped in a maze that constantly evolves around you. My first game, released in Java. Use WASD to move, MOUSE to look, and the LEFT MOUSE BUTTON to fire your weapon. Made in 72 hours for Ludum Dare 24. Scored #2 in Theme, #3 in Innovation.</p>
+            <p><a href="https://github.com/footballhead/evo-is-the-key">Source</a> &#8226; <a href="http://www.ludumdare.com/compo/ludum-dare-24/?action=preview&uid=16438">Entry page</a></p>
+        </td>
+    </tr></table>
+
+    <h2>Transcriptions</h2>
+    
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed scelerisque orci. Ut sed sapien felis. Curabitur tempor ante ligula, eget scelerisque tellus ornare a. Maecenas ut mauris ut nisl egestas placerat a vel sem. Mauris sit amet cursus elit. In hac habitasse platea dictumst. Mauris sit amet lobortis arcu. Maecenas enim felis, efficitur sed pretium luctus, venenatis ut diam. Integer vehicula mollis tellus, eget iaculis magna ultrices sed.</p>
+    <p>Sed euismod nisl sit amet tincidunt pellentesque. Sed venenatis, nisl quis facilisis porttitor, nisi tortor dictum urna, vitae porta magna odio ullamcorper massa. Phasellus viverra pellentesque dolor, quis accumsan sem bibendum sed. Nam faucibus blandit laoreet. Duis id posuere urna. Curabitur rutrum sapien a nulla lacinia, sed fermentum magna fringilla. Vestibulum a pulvinar dolor, eleifend commodo enim.</p>
+    <p>Nullam leo tellus, eleifend gravida eros a, scelerisque suscipit nunc. Phasellus efficitur, augue eu pharetra aliquam, purus urna tempor quam, non gravida sem ex eget nulla. Nunc erat nibh, viverra in turpis malesuada, volutpat luctus diam. Donec lorem neque, pellentesque feugiat enim a, vestibulum semper nulla. Donec eget molestie sapien. Maecenas ut dui porta ex ultrices tempor. Nam ac feugiat lectus, ac facilisis risus. Fusce et libero vitae nisi lobortis auctor at ut tellus. Quisque nec lacus accumsan nisl dignissim pellentesque sit amet eu est. Vivamus lectus massa, vestibulum quis lectus sed, luctus venenatis risus. Phasellus auctor eu erat in elementum. Nulla urna lorem, blandit sed eros eu, fermentum euismod odio. Nunc maximus sem eu felis aliquet, a luctus velit porta. Duis volutpat sem et metus pellentesque laoreet. Donec ultricies eget justo non faucibus.</p>
+    <p>Phasellus ut convallis elit. Phasellus sollicitudin convallis sapien quis blandit. Curabitur ut nunc at turpis tempor tristique at eget urna. Vivamus non maximus augue, eu iaculis tortor. Donec a feugiat magna, quis ultricies arcu. Curabitur ultricies ante eget finibus semper. Vestibulum condimentum consequat pulvinar. Nunc vulputate est nec blandit pretium. Ut lacus felis, iaculis quis nulla at, eleifend dictum nunc. Praesent a malesuada tellus, sit amet bibendum ipsum. Morbi sit amet pharetra mi, sit amet elementum ex.</p>
+    <p>Mauris fringilla nulla eu eros sagittis aliquam. Vivamus finibus ultrices sagittis. Aliquam ut lacus ligula. Nullam eu dui quis quam interdum fringilla. Fusce quis augue nisl. Fusce sed vestibulum nunc. Nam feugiat risus at mi gravida varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec risus ut tortor molestie faucibus et id enim. Nullam ut tortor bibendum, laoreet libero euismod, lacinia risus. In venenatis mattis nibh.</p>
+</main>
+
+</div>
+</body>
+
+</html>
