@@ -1,0 +1,85 @@
+body {
+    /*seamless paper texture from subtlepatterns.com */
+    background-image: url('seamless_paper_texture.png');
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+div.hrbottom {
+    margin: 0px;
+    height: 2px;
+
+    margin-bottom: 2em;
+
+    border-top: 2px;
+    border-top-style: solid;
+    border-top-color: black;
+
+    border-bottom: 2px;
+    border-bottom-style: dashed;
+    border-bottom-color: black;
+}
+div.hrtop {
+    margin: 0px;
+    height: 2px;
+
+    margin-top: 2em;
+
+    border-top: 2px;
+    border-top-style: dashed;
+    border-top-color: black;
+
+    border-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+div.textbody {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+p.linkbar {
+    text-align: center;
+    margin: 0.4em
+}
+
+a:link, a:visited, a:active {
+    color: #000000;
+}
+a:hover {
+    color: #999999;
+}
+
+table.projectbox {
+    padding: 0.2em;
+
+    border-top: 2px solid black;
+    border-bottom: 2px dashed black;
+}
+td.text {
+    vertical-align: top;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+td.text h3 {
+    margin: 0px;
+}
+td.text p {
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+
+table.projectboxtop {
+    padding: 0.2em;
+    border-top: 2px dotted black;
+}
+table.projectboxbot {
+    padding: 0.2em;
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+}

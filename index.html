@@ -3,94 +3,21 @@
 
 <head>
 <title>Michael Hitchens &mdash; Portfolio</title>
-<style>
-body {
-    /*seamless paper texture from subtlepatterns.com */
-    background-image: url('seamless_paper_texture.png');
-}
-h1 {
-    text-align: center;
-}
-h2 {
-    text-align: center;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-}
-div.hrbottom {
-    margin: 0px;
-    height: 2px;
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+function show( sectionid ) {
+    var allsections = document.getElementsByTagName( "section" );
 
-    margin-bottom: 2em;
-
-    border-top: 2px;
-    border-top-style: solid;
-    border-top-color: black;
-
-    border-bottom: 2px;
-    border-bottom-style: dashed;
-    border-bottom-color: black;
+    for ( i = 0; i < allsections.length; i++ ) {
+        var sect = allsections[i];
+        if ( sect.id == sectionid ) {
+            sect.style.display = "block";
+        } else {
+            sect.style.display = "none";
+        }
+    }
 }
-div.hrtop {
-    margin: 0px;
-    height: 2px;
-
-    margin-top: 2em;
-
-    border-top: 2px;
-    border-top-style: dashed;
-    border-top-color: black;
-
-    border-bottom: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: black;
-}
-div.textbody {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-p.linkbar {
-    text-align: center;
-    margin: 0.4em
-}
-
-a:link, a:visited, a:active {
-    color: #000000;
-}
-a:hover {
-    color: #999999;
-}
-
-table.projectbox {
-    padding: 0.2em;
-
-    border-top: 2px solid black;
-    border-bottom: 2px dashed black;
-}
-td.text {
-    vertical-align: top;
-}
-td.text h3 {
-    margin: 0px;
-}
-td.text p {
-    margin-top: 1em;
-    margin-bottom: 0em;
-}
-
-table.projectboxtop {
-    padding: 0.2em;
-    border-top: 2px dotted black;
-}
-table.projectboxbot {
-    padding: 0.2em;
-    border-top: 2px dotted black;
-    border-bottom: 2px dotted black;
-}
-
-
-
-</style>
+</script>
 </head>
 
 <body>
@@ -117,7 +44,8 @@ table.projectboxbot {
 </nav>
 
 <main>
-    <h2>Games</h2>
+    <h2><a href="javascript:show('games');">Games</a> &#8226; <a href="javascript:show('ludumdare');">Ludum Dare Entries</a> &#8226; <a href="javascript:show('transcriptions');">Transcriptions</a></h2>
+    <section id="games" style="display: none;">
     <table class="projectboxtop"><tr>
         <td>
             <img src="snake.png">
@@ -158,8 +86,9 @@ table.projectboxbot {
             <img src="snakeman.png">
         </td>
     </tr></table>
+    </section>
 
-    <h2><a href="http://www.ludumdare.com">Ludum Dare</a> Entries</h2>
+    <section id="ludumdare" style="display: none;">
     <table class="projectboxtop"><tr>
         <td>
             <img src="iccc.png">
@@ -190,15 +119,16 @@ table.projectboxbot {
             <p><a href="https://github.com/footballhead/evo-is-the-key">Source</a> &#8226; <a href="http://www.ludumdare.com/compo/ludum-dare-24/?action=preview&uid=16438">Entry page</a></p>
         </td>
     </tr></table>
+    </section>
 
+    <section id="transcriptions" style="display: none;">
     <h2>Transcriptions</h2>
-    
-
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed scelerisque orci. Ut sed sapien felis. Curabitur tempor ante ligula, eget scelerisque tellus ornare a. Maecenas ut mauris ut nisl egestas placerat a vel sem. Mauris sit amet cursus elit. In hac habitasse platea dictumst. Mauris sit amet lobortis arcu. Maecenas enim felis, efficitur sed pretium luctus, venenatis ut diam. Integer vehicula mollis tellus, eget iaculis magna ultrices sed.</p>
     <p>Sed euismod nisl sit amet tincidunt pellentesque. Sed venenatis, nisl quis facilisis porttitor, nisi tortor dictum urna, vitae porta magna odio ullamcorper massa. Phasellus viverra pellentesque dolor, quis accumsan sem bibendum sed. Nam faucibus blandit laoreet. Duis id posuere urna. Curabitur rutrum sapien a nulla lacinia, sed fermentum magna fringilla. Vestibulum a pulvinar dolor, eleifend commodo enim.</p>
     <p>Nullam leo tellus, eleifend gravida eros a, scelerisque suscipit nunc. Phasellus efficitur, augue eu pharetra aliquam, purus urna tempor quam, non gravida sem ex eget nulla. Nunc erat nibh, viverra in turpis malesuada, volutpat luctus diam. Donec lorem neque, pellentesque feugiat enim a, vestibulum semper nulla. Donec eget molestie sapien. Maecenas ut dui porta ex ultrices tempor. Nam ac feugiat lectus, ac facilisis risus. Fusce et libero vitae nisi lobortis auctor at ut tellus. Quisque nec lacus accumsan nisl dignissim pellentesque sit amet eu est. Vivamus lectus massa, vestibulum quis lectus sed, luctus venenatis risus. Phasellus auctor eu erat in elementum. Nulla urna lorem, blandit sed eros eu, fermentum euismod odio. Nunc maximus sem eu felis aliquet, a luctus velit porta. Duis volutpat sem et metus pellentesque laoreet. Donec ultricies eget justo non faucibus.</p>
     <p>Phasellus ut convallis elit. Phasellus sollicitudin convallis sapien quis blandit. Curabitur ut nunc at turpis tempor tristique at eget urna. Vivamus non maximus augue, eu iaculis tortor. Donec a feugiat magna, quis ultricies arcu. Curabitur ultricies ante eget finibus semper. Vestibulum condimentum consequat pulvinar. Nunc vulputate est nec blandit pretium. Ut lacus felis, iaculis quis nulla at, eleifend dictum nunc. Praesent a malesuada tellus, sit amet bibendum ipsum. Morbi sit amet pharetra mi, sit amet elementum ex.</p>
     <p>Mauris fringilla nulla eu eros sagittis aliquam. Vivamus finibus ultrices sagittis. Aliquam ut lacus ligula. Nullam eu dui quis quam interdum fringilla. Fusce quis augue nisl. Fusce sed vestibulum nunc. Nam feugiat risus at mi gravida varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec risus ut tortor molestie faucibus et id enim. Nullam ut tortor bibendum, laoreet libero euismod, lacinia risus. In venenatis mattis nibh.</p>
+    </section>
 </main>
 
 </div>
