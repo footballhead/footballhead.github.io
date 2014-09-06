@@ -4,20 +4,7 @@
 <head>
 <title>Michael Hitchens &mdash; Portfolio</title>
 <link rel="stylesheet" type="text/css" href="style.css">
-<script type="text/javascript">
-function show( sectionid ) {
-    var allsections = document.getElementsByTagName( "section" );
-
-    for ( i = 0; i < allsections.length; i++ ) {
-        var sect = allsections[i];
-        if ( sect.id == sectionid ) {
-            sect.style.display = "block";
-        } else {
-            sect.style.display = "none";
-        }
-    }
-}
-</script>
+<script type="text/javascript" src="site.js"></script>
 </head>
 
 <body>
@@ -45,6 +32,11 @@ function show( sectionid ) {
 
 <main>
     <h2><a href="javascript:show('games');">Games</a> &#8226; <a href="javascript:show('ludumdare');">Ludum Dare Entries</a> &#8226; <a href="javascript:show('transcriptions');">Transcriptions</a></h2>
+
+    <section id="intro" style="text-align:center;">
+        <p>(click a link!)</p>
+    </section>
+
     <section id="games" style="display: none;">
     <table class="projectboxtop"><tr>
         <td>
@@ -122,7 +114,6 @@ function show( sectionid ) {
     </section>
 
     <section id="transcriptions" style="display: none;">
-    <h2>Transcriptions</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed scelerisque orci. Ut sed sapien felis. Curabitur tempor ante ligula, eget scelerisque tellus ornare a. Maecenas ut mauris ut nisl egestas placerat a vel sem. Mauris sit amet cursus elit. In hac habitasse platea dictumst. Mauris sit amet lobortis arcu. Maecenas enim felis, efficitur sed pretium luctus, venenatis ut diam. Integer vehicula mollis tellus, eget iaculis magna ultrices sed.</p>
     <p>Sed euismod nisl sit amet tincidunt pellentesque. Sed venenatis, nisl quis facilisis porttitor, nisi tortor dictum urna, vitae porta magna odio ullamcorper massa. Phasellus viverra pellentesque dolor, quis accumsan sem bibendum sed. Nam faucibus blandit laoreet. Duis id posuere urna. Curabitur rutrum sapien a nulla lacinia, sed fermentum magna fringilla. Vestibulum a pulvinar dolor, eleifend commodo enim.</p>
     <p>Nullam leo tellus, eleifend gravida eros a, scelerisque suscipit nunc. Phasellus efficitur, augue eu pharetra aliquam, purus urna tempor quam, non gravida sem ex eget nulla. Nunc erat nibh, viverra in turpis malesuada, volutpat luctus diam. Donec lorem neque, pellentesque feugiat enim a, vestibulum semper nulla. Donec eget molestie sapien. Maecenas ut dui porta ex ultrices tempor. Nam ac feugiat lectus, ac facilisis risus. Fusce et libero vitae nisi lobortis auctor at ut tellus. Quisque nec lacus accumsan nisl dignissim pellentesque sit amet eu est. Vivamus lectus massa, vestibulum quis lectus sed, luctus venenatis risus. Phasellus auctor eu erat in elementum. Nulla urna lorem, blandit sed eros eu, fermentum euismod odio. Nunc maximus sem eu felis aliquet, a luctus velit porta. Duis volutpat sem et metus pellentesque laoreet. Donec ultricies eget justo non faucibus.</p>
