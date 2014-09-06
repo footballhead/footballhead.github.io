@@ -1,6 +1,8 @@
 body {
     /*seamless paper texture from subtlepatterns.com */
     background-image: url('seamless_paper_texture.png');
+    font-family: serif;
+    font-size: 12pt;
 }
 h1 {
     text-align: center;
@@ -85,4 +87,9 @@ table.projectboxbot {
 }
 section {
     position: relative;
+}
+
+tr.derp th {
+    text-align: left;
+    border-bottom: 2px dotted black;
 }
