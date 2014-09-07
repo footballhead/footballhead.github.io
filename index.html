@@ -7,7 +7,7 @@
 <script type="text/javascript" src="site.js"></script>
 </head>
 
-<body>
+<body onLoad="displayRightSection();">
 <div class="textbody">
 
 <header>
@@ -18,22 +18,26 @@
 <nav>
     <div class="hrtop"></div>
     <p class="linkbar">
-        <a href="http://blackforestprogramming.tumblr.com">Blog</a> &#8226;
-        <a href="http://twitter.com/blackforestprog">Twitter</a> &#8226;
-        <a href="https://github.com/footballhead">GitHub</a> &#8226;
-        <a href="https://plus.google.com/u/0/103557452275219213684/posts">Google+</a> &#8226;
-        <a href="https://soundcloud.com/michael-hitchens">SoundCloud</a> &#8226;
-        <a href="https://www.youtube.com/user/Lan1324">YouTube</a> &#8226;
-        Email
+        <a href="javascript:show('social');">Social Media</a> &#8226;
+        <a href="javascript:show('games');">Games</a> &#8226;
+        <a href="javascript:show('utilities');">Utilities</a> &#8226;
+        <a href="javascript:show('transcriptions');">Transcriptions</a> &#8226;
+        <a href="javascript:show('resources');">Resources</a>
     </p>
     <div class="hrbottom"></div>
 </nav>
 
 <main>
-    <h2><a href="javascript:show('games');">Games</a> &#8226; <a href="javascript:show('utilities');">Utilities</a> &#8226; <a href="javascript:show('transcriptions');">Transcriptions</a> &#8226; <a href="javascript:show('resources');">Resources</a> &#8226; <a href="javascript:alert(document.URL)">TEST</a></h2>
 
-    <section id="intro" style="text-align:center; display:block; opacity:1;">
-        <p>(click a link!)</p>
+    <section id="social">
+        <img src="Tumblr.png"><img src="Twitter.png">Github Google+ <img src="Soundcloud.png"><img src="YouTube.png"><img src="Mail.png">
+    <p><a href="http://blackforestprogramming.tumblr.com">Blog</a> &#8226;
+    <a href="http://twitter.com/blackforestprog">Twitter</a> &#8226;
+    <a href="https://github.com/footballhead">GitHub</a> &#8226;
+    <a href="https://plus.google.com/u/0/103557452275219213684/posts">Google+</a> &#8226;
+    <a href="https://soundcloud.com/michael-hitchens">SoundCloud</a> &#8226;
+    <a href="https://www.youtube.com/user/Lan1324">YouTube</a> &#8226;
+    Email</p>
     </section>
 
     <section id="games">

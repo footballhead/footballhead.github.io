@@ -9,8 +9,8 @@ h1 {
 }
 h2 {
     text-align: center;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 div.hrbottom {
     margin: 0px;
@@ -57,12 +57,6 @@ a:hover {
     color: #999999;
 }
 
-table.projectbox {
-    padding: 0.2em;
-
-    border-top: 2px solid black;
-    border-bottom: 2px dashed black;
-}
 td.text {
     vertical-align: top;
     padding-left: 0.5em;
@@ -76,13 +70,12 @@ td.text p {
     margin-bottom: 0em;
 }
 
-table.projectboxtop {
+table.projectboxtop, table.projectboxbot {
     padding: 0.2em;
     border-top: 2px dotted black;
+    font-size: 12pt;
 }
 table.projectboxbot {
-    padding: 0.2em;
-    border-top: 2px dotted black;
     border-bottom: 2px dotted black;
 }
 section {
