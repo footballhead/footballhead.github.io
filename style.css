@@ -86,10 +86,20 @@ table.projectboxbot {
     border-bottom: 2px dotted black;
 }
 section {
-    position: relative;
+    display: none;
+    opacity: 1;
 }
 
-tr.derp th {
+table.transcriptions {
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+
+    border-collapse: collapse;
+}
+table.transcriptions th {
     text-align: left;
     border-bottom: 2px dotted black;
+}
+table.transcriptions tr:hover {
+    background: rgba(0,0,0,0.25);
 }
