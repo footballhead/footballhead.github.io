@@ -18,7 +18,6 @@
  - add a bookmark link?
 * footer?
 * original release page for gamemaker games
-* icons from Medialoot (http://medialoot.com/item/post-social-media-stamps/)
 * background from seamless paper texture from subtlepatterns.com
 * dropshadow on entry images?
 * icons for github, google+
@@ -36,3 +35,4 @@
  - would require AJAX to get...
 * variable width layout?
 * easier way to manage links on transcriptions page
+* built-in midi player for transcription page
