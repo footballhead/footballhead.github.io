@@ -2,12 +2,14 @@
 window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                               window.webkitRequestAnimationFrame || window.oRequestAnimationFrame;
 
-// animation start time
+/// animation start time
 var start = null;
-// the animation we are currently performing
+/// the animation we are currently performing
 var animation = null;
-// the object we are animating
+/// the object we are animating
 var animObj = null;
+/// the current section (used for transition effect)
+var cursection = null;
 
 /// Update animations callback.
 function step( timestamp ) {
@@ -112,7 +114,11 @@ function getAllSectionIDs() {
 ///
 /// @param sectionid The `id` of the <section> tag to display
 function show( sectionid ) {
+    if ( sectionid == cursection ) return;
+
     var allsections = document.getElementsByTagName( "section" );
+
+    cursection = sectionid;
 
     for ( i = 0; i < allsections.length; i++ ) { // why u no have foreach
         var sect = allsections[i];

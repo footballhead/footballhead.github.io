@@ -61,6 +61,7 @@ td.text {
     vertical-align: top;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    width: 600px;
 }
 td.text h3 {
     margin: 0px;
@@ -74,6 +75,7 @@ table.projectboxtop, table.projectboxbot {
     padding: 0.2em;
     border-top: 2px dotted black;
     font-size: 12pt;
+    width: 800px;
 }
 table.projectboxbot {
     border-bottom: 2px dotted black;
