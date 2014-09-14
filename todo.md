@@ -4,14 +4,10 @@
 * add email
 * direct download links for Ludum Dare entries
 * footer?
-* create resources page
 * current projects page
 * prototypes page
 * get rid of lorem before reveal
-* ?p= sends another HTTP GET request (causes blinking; unecessary)... but # messes with scrolling...
- - is the ability to bookmark sections necessary?
- - the current #p breaks consistent font size on Chrome...
- - add a bookmark link?
+
 * original release page for gamemaker games
 * background from seamless paper texture from subtlepatterns.com
 
@@ -30,3 +26,10 @@
 * variable width layout?
 * easier way to manage links on transcriptions page
 * built-in midi player for transcription page
+
+# SECTION SYSTEM
+
+* ?p= sends another HTTP GET request (causes blinking; unecessary)... but # messes with scrolling...
+ - is the ability to bookmark sections necessary?
+ - the current #p breaks consistent font size on Chrome...
+ - add a bookmark link?
