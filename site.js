@@ -1,6 +1,12 @@
 // try to get the right function for animation
-window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-                              window.webkitRequestAnimationFrame || window.oRequestAnimationFrame;
+window.requestAnimationFrame = window.requestAnimationFrame ||
+                               window.mozRequestAnimationFrame ||
+                               window.webkitRequestAnimationFrame ||
+                               window.oRequestAnimationFrame;
+
+// ****************************************************************************
+//     GLOBALS
+// ****************************************************************************
 
 /// animation start time
 var start = null;
@@ -10,6 +16,10 @@ var animation = null;
 var animObj = null;
 /// the current section (used for transition effect)
 var cursection = null;
+
+// ****************************************************************************
+//     ANIMATION UPDATE
+// ****************************************************************************
 
 /// Update animations callback.
 function step( timestamp ) {
@@ -41,6 +51,10 @@ function step( timestamp ) {
         animObj = null;
     }
 }
+
+// ****************************************************************************
+//     FUNCIONS
+// ****************************************************************************
 
 /// Start the fade in animation for the given element.
 function fadein( element ) {
