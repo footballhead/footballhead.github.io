@@ -7,11 +7,11 @@ body {
 h1 {
     text-align: center;
 }
-h2 {
+/*h2 {
     text-align: center;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-}
+}*/
 div.hrbottom {
     margin: 0px;
     height: 2px;
