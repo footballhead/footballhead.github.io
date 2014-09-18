@@ -99,17 +99,30 @@ table.transcriptions tr:hover {
     background: rgba(0,0,0,0.25);
 }
 
-table.social {
+table.social, table.utils {
     border-top: 2px dotted black;
     border-bottom: 2px dotted black;
     border-collapse: collapse;
     width: 800px;
 }
-table.social td {
+table.social td, table.utils td {
     border-top: 1px dotted black;
     border-bottom: 1px dotted black;
     vertical-align: middle;
 }
 table.social img {
     vertical-align: middle;
+}
+
+table.utils td {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    /* need to compensate for smaller border */
+}
+table.utils h3 {
+    margin: 0px;
+}
+table.utils p {
+    margin-top: 1em;
+    margin-bottom: 0px;
 }
