@@ -1,5 +1,8 @@
 # TODO
 
+* add meta tags
+* not working on safari...
+* favicons for social page
 * images on utilities page
 * add email
 * direct download links for Ludum Dare entries
