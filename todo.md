@@ -4,11 +4,10 @@
 * add meta tags
 * not working on safari...
 * add email
-* restructure resources page
-* background from seamless paper texture from subtlepatterns.com
 
 # WISHLIST
 
+* background from seamless paper texture from subtlepatterns.com
 * transcription as derp class?
 * add images to transcriptions page?
 * turn games section into one large table
