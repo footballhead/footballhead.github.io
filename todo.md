@@ -9,6 +9,7 @@
 
 # WISHLIST
 
+* transcription as derp class?
 * add images to transcriptions page?
 * turn games section into one large table
 * consistency in style.css

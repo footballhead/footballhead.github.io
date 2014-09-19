@@ -40,6 +40,8 @@
     </tbody></table>
     </section>
 
+
+
     <section id="games">
     <p>I primarily make video games! Here are the ones I've released so far.</p>
     <table class="projectboxtop"><tr>
@@ -100,6 +102,8 @@
     </tr></table>
     </section>
 
+
+
     <section id="utilities">
         <p>I make utilities and libraries to fill my needs; here are a bunch that I've coded.</p>
         <table class="utils"><tbody>
@@ -126,10 +130,12 @@
         </tbody></table>
     </section>
 
+
+
     <section id="transcriptions">
     <p>In my spare time I transcribe pieces of music; here are my works so far.</p>
     <table class="transcriptions" style="width:800px;"><tbody>
-        <tr class="derp"><th>Title</th>         <th>Artist</th>          <th>From</th>                 <th>Video</th><th>PDF</th><th>MIDI</th></tr>
+        <tr class="derp"><th>Title</th><th>Artist</th><th>From</th><th>Video</th><th>PDF</th><th>MIDI</th></tr>
         <!-- generated with transform.py and transcriptions.txt -->
         <tr><td>Das Wandern</td><td>Kajiura Yuki</td><td>.hack//SIGN</td><td><a href='https://www.youtube.com/watch?v=oRDAg2-g-30'>Video</a></td><td><a href='https://dl.dropboxusercontent.com/u/17927728/Das-Wandern.pdf'>PDF</a></td><td><a href='https://dl.dropboxusercontent.com/u/17927728/Das-Wandern.mid'>MIDI</a></td></tr>
         <tr><td>The Bones of Jakobson</td><td>Jessica Curry</td><td>Dear Esther</td><td><a href='https://www.youtube.com/watch?v=x0eB1S2J_kw'>Video</a></td><td><a href='https://dl.dropboxusercontent.com/u/17927728/The-Bones-of-Jakobson.pdf'>PDF</a></td><td><a href='https://dl.dropboxusercontent.com/u/17927728/The-Bones-of-Jakobson.mid'>MIDI</a></td></tr>
@@ -148,123 +154,38 @@
     </tbody></table>
     </section>
 
+
+
     <section id="resources">
     <p>The more tools you have at you're disposal the easier making video games becomes. Here are a bunch of resources that I've found useful over the years.</p>
 
     <h2>Engines</h2>
-    <ul>
-        <li><a href="http://jmonkeyengine.org">jMonkeyEngine</a>: Great 3D engine for Java for publishing to desktop systems; handles loading and presenting of assets, handling most of the dirty work for you. Provides many shaders including normal mapping, water rendering, and god rays.</li>
-        <li><a href="http://love2d.org">L&Ouml;VE</a>: Great 2D engine for Lua for publishing to desktop systems; provides APIs for everything you would need in a 2D game (physics, sound, graphics, etc)</li>
-        <li><a href="https://www.yoyogames.com/studio">GameMaker</a>: Good beginner game maker tool; can deploy to a variety of operating systems (with paid upgrades); features both a drag-and-drop interface paired with it's own scripting language</li>
-    </ul>
+    <table class="social"><tbody>
+        <tr><td><a href="http://jmonkeyengine.org">jMonkeyEngine</a></td><td>3D video game engine coded in Java</td></tr>
+        <tr><td><a href="http://love2d.org">L&Ouml;VE</a></td><td>easy-to-learn-and-use 2D game engine utilizing Lua</td></tr>
+        <tr><td><a href="https://www.yoyogames.com/studio">GameMaker</a></td><td>Game making program for both the new and the experienced</td></tr>
+    </tbody></table>
 
     <h2>Libraries</h2>
-    <ul>
-        <li><a href="http://lwjgl.org">Lightweight Java Game Library (LWJGL)</a>: OpenGL for Java; also provides OpenAL bindings; this provides you access to the raw OpenGL calls from Java; if you're looking for something that does most of the heavy-lifting for you look elsewhere (like jMonkeyEngine)</li>
-        <li><a href="https://www.libsdl.org">SDL</a>: C library for audio, input handling, and 2D graphics; also provides OpenGL capabilities</li>
-    </ul>
+    <table class="social"><tbody>
+        <tr><td><a href="http://lwjgl.org">LWJGL</a></td><td>OpenGL, OpenAL, and OpenCL for Java</td></tr>
+        <tr><td><a href="https://www.libsdl.org">SDL</a></td><td>C library for 2D graphics, input handling, and much more</td></tr>
+    </tbody></table>
 
     <h2>Programs and Services</h2>
-
-    <h3>3D Modelling</h3>
-    <ul>
-        <li><a href="http://www.blender.org">Blender</a>: powerful 3D modelling software</li>
-        <ul>
-            <li>free and open source</li>
-            <li>Windows/Mac OS X/Linux</li>
-            <li>very powerful but has a very, very, <em>very</em> steep learning curve</li>
-            <li>can export as variety of formats</li>
-        </ul>
-    </ul>
-
-    <h3>Art</h3>
-    <ul>
-        <li><a href="http://www.gimp.org">GNU Image Manipulation Program (GIMP)</a>: all-purpose program for graphics creation and editing</li>
-        <ul>
-            <li>free and open source</li>
-            <li>Windows/Mac OS X/Linux</li>
-            <li>advanced and powerful but not impossible to learn</li>
-            <li>great for textures, bitmap art, pixel art</li>
-        </ul>
-        <li><a href="http://www.inkscape.org/en/">Inkscape</a>: tool for the creation of scalable vector graphics</li>
-        <ul>
-            <li>free and open source</li>
-            <li>Windows/Mac OS X/Linux</li>
-            <li>great for scalable vector graphics (SVG), diagrams</li>
-        </ul>
-    </ul>
-
-    <h3>Level Creation</h3>
-    <ul>
-        <li><a href="http://www.mapeditor.org/">Tiled</a>: all-purpose level editor</li>
-        <ul>
-            <li>free and open source</li>
-            <li>Windows/Mac OS X/Linux</li>
-            <li>emphasis on <em>tile</em> map editor although allows arbitrary placement of objects on respective layers</li>
-            <li>saves as XML, exports to other formats (can even write your own exporter!)</li>
-        </ul>
-    </ul>
-
-    <h3>Music</h3>
-    <ul>
-        <li><a href="http://famitracker.com">FamiTracker</a>: program for creating NES music</li>
-        <ul>
-            <li>free and open source</li>
-            <li>Windows only; works in Linux with Wine</li>
-            <li>results sounds very 8-bit/chiptune</li>
-            <li>can export as WAV</li>
-            <li>interface is track oriented; displays note names instead of staff</li>
-        </ul>
-        <li><a href="http://incompetech.com">Incompetech</a>: site with a bunch of great, royalty-free music</li>
-        <ul>
-            <li>very professional souding music</li>
-            <li>all royalty-free (licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons: By Attribution 3.0</a>)</li>
-            <li>can pay for no-attribution license</li>
-        </ul>
-        <li><a href="http://musesore.org">MuseScore</a>: music notation software</li>
-        <ul>
-            <li>free and open source</li>
-            <li>Windows/Mac OS X/ Linux</li>
-            <li>more meant for music notation but results can be exported to MIDI</li>
-            <li>staff-based; intimidating for those with no background in music theory</li>
-        </ul>
-    </ul>
-
-    <h3>Sound</h3>
-    <ul>
-        <li><a href="http://www.drpetter.se/project_sfxr.html">SFXR</a>: generates sounds reminiscent of the SNES</li>
-        <ul>
-            <li>free and open source</li>
-            <li>cross-platform (if you include ports)</li>
-            <li>the intent was to generate more place-holder sounds, but the SNES characteristic sounds may be suitable for certain projects</li>
-        </ul>
-    </ul>
-
-    <h3>Text Editors</h3>
-    <ul>
-        <li><a href="https://atom.io">Atom</a>: highly customizable text editor inspired by Sublime Text</li>
-        <ul>
-            <li>free and open source</li>
-            <li>Windows/Mac OS X/Linux</li>
-            <li>feels more like an IDE but can be used as a basic text editor</li>
-            <li>customizable through plugins written in CoffeeScript</li>
-            <li>has a central repository for sharing plugins, which is built into the program</li>
-            <li>my personal preference</li>
-        </ul>
-        <li><a href="http://notepad-plus-plus.org">Notepad++</a>: fast and reliable advanced text editor for Windows</li>
-        <ul>
-            <li>free and open source</li>
-            <li>Windows only; works with Wine</li>
-            <li>the best text editor I've come across for Windows</li>
-        </ul>
-        <li><a href="http://www.sublimetext.com">Sublime Text</a>: great text editor</li>
-        <ul>
-            <li>proprietary; both registered (paid) and unregistered (free but with nag to pay) versions</li>
-            <li>Windows/Mac OS X/Linux</li>
-            <li>very small, slick, sexy, and fast</li>
-            <li>extendible through Python plugins</li>
-        </ul>
-    </ul>
+    <table class="social"><tbody>
+        <tr><td><a href="http://www.blender.org">Blender</a></td><td>3D Modelling</td><td>very powerful but very complicated</td></tr>
+        <tr><td><a href="http://www.gimp.org">GIMP</a></td><td>Art (Bitmap)</td><td>all-purpose graphics editing and creation software</td></tr>
+        <tr><td><a href="http://www.inkscape.org/en/">Inkscape</a></td><td>Art (Vector)</td><td>scalable vector graphics editor and creator</td></tr>
+        <tr><td><a href="http://www.mapeditor.org/">Tiled</a></td><td>Level Editor</td><td>general-purpose 2D level editor</td></tr>
+        <tr><td><a href="http://famitracker.com">FamiTracker</a></td><td>Music</td><td>program for creating SNES music</td></tr>
+        <tr><td><a href="http://incompetech.com">Incompetech</a></td><td>Music</td><td>website with lots of high quality royalty-free music</td></tr>
+        <tr><td><a href="http://musesore.org">MuseScore</a></td><td>Music Notation</td><td>open source music notation software</td></tr>
+        <tr><td><a href="http://www.drpetter.se/project_sfxr.html">SFXR</a></td><td>Sound Effects</td><td>SNES-inspired sound effects generator</td></tr>
+        <tr><td><a href="https://atom.io">Atom</a></td><td>Text Editor</td><td>highly configurable advanced text editor; almost an IDE</td></tr>
+        <tr><td><a href="http://notepad-plus-plus.org">Notepad++</a></td><td>Text Editor</td><td>fast and reliable advanced text editor for Windows</td></tr>
+        <tr><td><a href="http://www.sublimetext.com">Sublime Text</a></td><td>Text Editor</td><td>small, slick, sexy, and fast advanced text editor</td></tr>
+    </tbody></table>
     </section>
 </main>
 
