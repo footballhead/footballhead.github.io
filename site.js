@@ -53,7 +53,7 @@ function step( timestamp ) {
 }
 
 // ****************************************************************************
-//     FUNCIONS
+//     FUNCTIONS
 // ****************************************************************************
 
 /// Start the fade in animation for the given element.
@@ -123,9 +123,9 @@ function getAllSectionIDs() {
 
 /// Hide all <section>s and display the one with the given ID.
 ///
-/// Works by manipulating `display` tag. If you add any more <section> tags you
-/// might want to extend this code.
+/// Works by manipulating `display` tag.
 ///
+/// @remarks Also bolds the corresponding link in topbar.
 /// @param sectionid The `id` of the <section> tag to display
 function show( sectionid ) {
     if ( sectionid == cursection ) return;
@@ -136,14 +136,20 @@ function show( sectionid ) {
 
     for ( i = 0; i < allsections.length; i++ ) { // why u no have foreach
         var sect = allsections[i];
+        var linkid = sect.id + "Link";
+        var linkobj = document.getElementById( linkid );
 
         if ( sect.id == sectionid ) {
             sect.style.display = "block";
 
             fadein( sect );
+            linkobj.style.fontWeight = "bold";
+            linkobj.style.textDecoration = "none";
         } else {
             sect.style.display = "none";
             sect.style.opacity = 0;
+            linkobj.style.fontWeight = "normal";
+            linkobj.style.textDecoration = "underline";
         }
     }
 }
