@@ -1,22 +1,22 @@
 # TODO
 
+* add nice serif server-side font
 * add meta tags
 * not working on safari...
-* favicons for social page
-* images on utilities page
 * add email
-* direct download links for Ludum Dare entries
-* footer?
-* current projects page
-* prototypes page
-* get rid of lorem before reveal
-
-* original release page for gamemaker games
+* restructure resources page
 * background from seamless paper texture from subtlepatterns.com
 
 # WISHLIST
 
-* add nice serif server-side font
+* add images to transcriptions page?
+* turn games section into one large table
+* consistency in style.css
+* original release page for gamemaker games
+* current projects page
+* prototypes page
+* direct download links for Ludum Dare entries
+* footer?
 * some sort of animation queue and animation controller module?
 * onLoad animations for header and stuff?
 * add "expand" button to games entries to reveal more info (e.g. release date, programming language, etc)?
