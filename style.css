@@ -23,7 +23,7 @@
 body {
     /*seamless paper texture from subtlepatterns.com */
     background-image: url('seamless_paper_texture.png');
-    font-family: Linux Libertine;
+    font-family: Linux Libertine, serif;
     font-size: 12pt;
 }
 h1 {
