@@ -1,12 +1,24 @@
 @font-face {
     font-family: Linux Libertine;
     src: local('Linux Libertine'),
+         url('./fonts/LinLibertine_Rah.eot') format('embedded-opentype'),
          url('./fonts/LinLibertine_R.woff') format('woff'),
          url('./fonts/LinLibertine_Rah.ttf') format('truetype'),
          url('./fonts/LinLibertine_R.svg#Linux_Libertine') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: Linux Libertine;
+    src: local('Linux Libertine'),
+         url('./fonts/LinLibertine_RBah.eot') format('embedded-opentype'),
+         url('./fonts/LinLibertine_RB.woff') format('woff'),
+         url('./fonts/LinLibertine_RBah.ttf') format('truetype'),
+         url('./fonts/LinLibertine_RB.svg#Linux_Libertine') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
 
 body {
     /*seamless paper texture from subtlepatterns.com */
