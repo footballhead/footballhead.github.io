@@ -130,7 +130,7 @@ table.social, table.utils {
 table.social td, table.utils td {
     border-top: 1px dotted black;
     border-bottom: 1px dotted black;
-    vertical-align: middle;
+    padding-bottom: 0.1em;
 }
 table.social img {
     vertical-align: middle;

@@ -1,9 +1,6 @@
 # TODO
 
-* add nice serif server-side font
-* add meta tags
-* not working on safari...
-* add email
+* not working on safari...? I'm not sure anymore...
 
 # WISHLIST
 
