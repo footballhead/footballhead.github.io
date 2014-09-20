@@ -1,12 +1,12 @@
 # TODO
 
-* add nice serif server-side font
 * add meta tags
 * not working on safari...
 * add email
 
 # WISHLIST
 
+* test on IE 8 or below
 * background from seamless paper texture from subtlepatterns.com
 * transcription as derp class?
 * add images to transcriptions page?

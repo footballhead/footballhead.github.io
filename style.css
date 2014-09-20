@@ -44,9 +44,9 @@ div.hrbottom {
     border-top-style: solid;
     border-top-color: black;
 
-    border-bottom: 2px;
+    /*border-bottom: 2px;
     border-bottom-style: dashed;
-    border-bottom-color: black;
+    border-bottom-color: black;*/
 }
 div.hrtop {
     margin: 0px;
@@ -54,9 +54,9 @@ div.hrtop {
 
     margin-top: 2em;
 
-    border-top: 2px;
+    /*border-top: 2px;
     border-top-style: dashed;
-    border-top-color: black;
+    border-top-color: black;*/
 
     border-bottom: 2px;
     border-bottom-style: solid;
@@ -95,12 +95,12 @@ td.text p {
 
 table.projectboxtop, table.projectboxbot {
     padding: 0.2em;
-    border-top: 2px dotted black;
+    border-top: 1px dotted black;
     font-size: 12pt;
     width: 800px;
 }
 table.projectboxbot {
-    border-bottom: 2px dotted black;
+    border-bottom: 1px dotted black;
 }
 section {
     display: none;
@@ -108,37 +108,40 @@ section {
 }
 
 table.transcriptions {
-    border-top: 2px dotted black;
-    border-bottom: 2px dotted black;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
 
     border-collapse: collapse;
 }
 table.transcriptions th {
     text-align: left;
-    border-bottom: 2px dotted black;
+    border-bottom: 1px dotted black;
 }
 table.transcriptions tr:hover {
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.1);
 }
 
 table.social, table.utils {
-    border-top: 2px dotted black;
-    border-bottom: 2px dotted black;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
     border-collapse: collapse;
     width: 800px;
 }
-table.social td, table.utils td {
-    border-top: 1px dotted black;
-    border-bottom: 1px dotted black;
-    vertical-align: middle;
-}
-table.social img {
+table.social td {
     vertical-align: middle;
 }
 
+table.social img {
+    vertical-align: middle;
+}
+table.social tr:hover {
+    background: rgba(0,0,0,0.1);
+}
 table.utils td {
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
     /* need to compensate for smaller border */
 }
 table.utils h3 {
