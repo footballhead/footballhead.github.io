@@ -1,5 +1,13 @@
 # TODO
 
+<<<<<<< HEAD
+* add meta tags
+* not working on safari...
+* add email
+=======
+* not working on safari...? I'm not sure anymore...
+>>>>>>> 85e1c32778cb2e38e7edadcac4d86a7c2ad6842c
+
 # WISHLIST
 
 * test on IE 8 or below
