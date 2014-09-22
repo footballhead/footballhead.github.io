@@ -1,3 +1,30 @@
+/******************************************************************************
+    GENERAL NOTES
+
+      * website width is hard-coded to 800px
+      * font is Linux Libertine
+      * font size is 12pt
+      * use em instead of px where possible!
+          - exception is borders which are fine using px
+      * borders should be 2px dotted black
+      * table row hover accent is rgba(0,0,0,0.1)
+      * table td padding should be 0.1em on top and bottom
+******************************************************************************/
+
+/******************************************************************************
+    SERVER-SIDE FONT
+
+    I like Linux Libertine so much that I try to force the client to use it.
+    Fallback (defined in body) is generic serif.
+
+    Each style needs its own entry. I use two styles (normal and bolded) thus
+    I have two entries. Each points to the font files for that style.
+
+    EOT files are for Internet Explorer.
+    SVG files are for Safari.
+    WOFF and TTF are for the rest.
+******************************************************************************/
+
 @font-face {
     font-family: Linux Libertine;
     src: local('Linux Libertine'),
@@ -10,7 +37,7 @@
 }
 @font-face {
     font-family: Linux Libertine;
-    src: local('Linux Libertine'),
+    src: local('Linux Libertine Bold'),
          url('./fonts/LinLibertine_RBah.eot') format('embedded-opentype'),
          url('./fonts/LinLibertine_RB.woff') format('woff'),
          url('./fonts/LinLibertine_RBah.ttf') format('truetype'),
@@ -19,6 +46,9 @@
     font-style: normal;
 }
 
+/******************************************************************************
+    GENERAL STYLING
+******************************************************************************/
 
 body {
     /*seamless paper texture from subtlepatterns.com */
@@ -26,127 +56,224 @@ body {
     font-family: Linux Libertine, serif;
     font-size: 12pt;
 }
-h1 {
-    text-align: center;
-}
-/*h2 {
-    text-align: center;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}*/
-div.hrbottom {
-    margin: 0px;
-    height: 2px;
 
-    margin-bottom: 2em;
-
-    border-top: 2px;
-    border-top-style: solid;
-    border-top-color: black;
-}
-div.hrtop {
-    margin: 0px;
-    height: 2px;
-
-    margin-top: 2em;
-
-    border-bottom: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: black;
-}
 div.textbody {
+    /* All site content is contained within this div. This helps us control the
+     * site width. We center it on the screen because it looks better. */
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-}
-p.linkbar {
-    text-align: center;
-    margin: 0.4em
 }
 
 a:link, a:visited, a:active {
     color: #000000;
 }
+
 a:hover {
     color: #999999;
 }
 
+section {
+    /* Sections start off as hidden. When the page is loaded it triggers the
+     * transition to display the Contact section. Clicking the links resets the
+     * section style to this while transitioning to the new style. */
+    display: none;
+    opacity: 1;
+}
+
+/******************************************************************************
+    HEADER STYLING
+******************************************************************************/
+
+#name {
+    padding-top: 1em;
+    margin-bottom: 0em;
+
+    font-size: 200%;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+#subheader {
+    text-align: center;
+    margin: 0px;
+}
+
+/******************************************************************************
+    NAVBAR STYLING
+******************************************************************************/
+
+#linkbar {
+    /* Here the extra margin and padding help keep the header, navigation, and
+     * content sections visually separate and distinct. */
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+
+    text-align: center;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/******************************************************************************
+    SOCIAL/CONTACT STYLING
+******************************************************************************/
+
+#socialtab {
+    /* Without border collapse we don't get a solid hover highlight running
+     * across the table, which looks gross. */
+    border-collapse: collapse;
+
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+
+    /* This table does not have enough content to fill the site layout width
+     * of 800px so we must force it to use the right width. */
+    width: 800px;
+}
+
+#socialtab td {
+    vertical-align: middle;
+
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+#socialtab tr:hover {
+    /* translucent black background on hover */
+    background: rgba( 0, 0, 0, 0.1 );
+}
+
+#socialtab img {
+    vertical-align: bottom;
+}
+
+/******************************************************************************
+    GAMES STYLING
+******************************************************************************/
+
+table.projectboxtop, table.projectboxbot {
+    border-top: 1px dotted black;
+    padding: 0.1em;
+    width: 800px;
+}
+
+table.projectboxbot {
+    border-bottom: 1px dotted black;
+}
+
 td.text {
     vertical-align: top;
+
+    /* The extra padding, in this case, make the entries look better. */
     padding-left: 0.5em;
     padding-right: 0.5em;
-    width: 600px;
 }
+
 td.text h3 {
     margin: 0px;
 }
+
 td.text p {
     margin-top: 1em;
     margin-bottom: 0em;
 }
 
-table.projectboxtop, table.projectboxbot {
-    padding: 0.2em;
-    border-top: 1px dotted black;
-    font-size: 12pt;
-    width: 800px;
-}
-table.projectboxbot {
-    border-bottom: 1px dotted black;
-}
-section {
-    display: none;
-    opacity: 1;
-}
+/******************************************************************************
+    UTILITIES
+******************************************************************************/
 
-table.transcriptions {
+#utilstab {
     border-top: 1px dotted black;
     border-bottom: 1px dotted black;
 
     border-collapse: collapse;
 }
-table.transcriptions th {
+
+#utilstab td {
+    /* Padding is greater to space elements and reduce visual clutter making
+     * the section easier to read. */
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+}
+
+#utilstab h3 {
+    /* Normally headers have no margin on the top and some margin on the
+     * bottom. I want it the other way around (margin on top, none on bottom).
+     * Since the top margin is already taken care of by the <td> styling I can
+     * safely just set it to 0. */
+    margin: 0em;
+}
+
+#utilstab p {
+    /* In the same vein as <h3> we want to reverse top and bottom margin to
+     * make layout work better. */
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+
+/******************************************************************************
+    TRANSCRIPTIONS
+******************************************************************************/
+
+#transtab {
+    /* This table does not have enough content to fill the site layout width
+     * of 800px so we must force it to use the right width. */
+    width: 800px;
+
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+
+    /* Without border collapse we don't get a solid hover highlight running
+     * across the table, which looks gross. */
+    border-collapse: collapse;
+}
+
+#transtab th {
+    /* The default <th> styling looks bad; override. */
     text-align: left;
     border-bottom: 1px dotted black;
 }
-table.transcriptions tr:hover {
-    background: rgba(0,0,0,0.1);
+
+#transtab tr:hover {
+    background: rgba( 0, 0, 0, 0.1 );
 }
 
-table.social, table.utils {
+/******************************************************************************
+    RESOURCES
+
+    We don't use ID styling here because we have at least 3 tables with the
+    same styling. Otherwise we are copy-pasted from SOCIAL/CONTACT.
+******************************************************************************/
+
+table.res {
+    /* Without border collapse we don't get a solid hover highlight running
+     * across the table, which looks gross. */
+    border-collapse: collapse;
+
     border-top: 1px dotted black;
     border-bottom: 1px dotted black;
-    border-collapse: collapse;
+
+    /* This table does not have enough content to fill the site layout width
+     * of 800px so we must force it to use the right width. */
     width: 800px;
 }
-<<<<<<< HEAD
-table.social td {
+
+table.res td {
     vertical-align: middle;
-=======
-table.social td, table.utils td {
-    border-top: 1px dotted black;
-    border-bottom: 1px dotted black;
+
+    padding-top: 0.1em;
     padding-bottom: 0.1em;
->>>>>>> 85e1c32778cb2e38e7edadcac4d86a7c2ad6842c
 }
 
-table.social img {
-    vertical-align: middle;
-}
-table.social tr:hover {
-    background: rgba(0,0,0,0.1);
-}
-table.utils td {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    border-top: 1px dotted black;
-    border-bottom: 1px dotted black;
-    /* need to compensate for smaller border */
-}
-table.utils h3 {
-    margin: 0px;
-}
-table.utils p {
-    margin-top: 1em;
-    margin-bottom: 0px;
+table.res tr:hover {
+    /* translucent black background on hover */
+    background: rgba( 0, 0, 0, 0.1 );
 }

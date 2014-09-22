@@ -12,30 +12,24 @@
     <script type="text/javascript" src="site.js"></script>
 </head>
 
-<body onLoad="displayRightSection();">
-<div class="textbody">
+<body onLoad="displayRightSection();"><div class="textbody">
 
 <header>
-    <h1 style="padding-top:1em; margin-bottom:0px;">Michael Hitchens</h1>
-    <p style="text-align:center; margin:0px;">Third year Computer Science student at the University of Waterloo</p>
+    <div id="name">Michael Hitchens</div>
+    <div id="subheader">Third year Computer Science student at the University of Waterloo</div>
 </header>
 
-<nav>
-    <div class="hrtop"></div>
-    <p class="linkbar">
-        <a href="javascript:show('social');" id="socialLink">Social Media</a> &#8226;
-        <a href="javascript:show('games');" id="gamesLink">Games</a> &#8226;
-        <a href="javascript:show('utilities');" id="utilitiesLink">Utilities</a> &#8226;
-        <a href="javascript:show('transcriptions');" id="transcriptionsLink">Transcriptions</a> &#8226;
-        <a href="javascript:show('resources');" id="resourcesLink">Resources</a>
-    </p>
-    <div class="hrbottom"></div>
-</nav>
+<nav><div id="linkbar">
+    <a href="javascript:show('social');" id="socialLink">Contact</a> &#8226;
+    <a href="javascript:show('games');" id="gamesLink">Games</a> &#8226;
+    <a href="javascript:show('utilities');" id="utilitiesLink">Utilities</a> &#8226;
+    <a href="javascript:show('transcriptions');" id="transcriptionsLink">Transcriptions</a> &#8226;
+    <a href="javascript:show('resources');" id="resourcesLink">Resources</a>
+</div></nav>
 
 <main>
-    <section id="social">
-    <p>I can be found on a variety of social platforms, like the following:</p>
-    <table class="social"><tbody>
+    <section id="social"><p>I can be contacted on a variety of platforms:</p>
+    <table id="socialtab"><tbody>
         <tr><td><img src="social/tumblr.png"> <a href="http://blackforestprogramming.tumblr.com">Tumblr</a></td><td>My blog for longer articles</td></tr>
         <tr><td><img src="social/twitter.ico"> <a href="http://twitter.com/blackforestprog">Twitter</a></td><td>Frequent mini updates on gamedev and life</td></tr>
         <tr><td><img src="social/github.png"> <a href="https://github.com/footballhead">GitHub</a></td><td>Public repository for my source code</td></tr>
@@ -47,9 +41,25 @@
     </section>
 
 
+    <!--
+    The structure of the code for the layout of the games section is different
+    from the rest in that each entry is a new table. This helps support the
+    layout I wanted with the image alternating from far left to far right each
+    alternate entry. I found that using a div with image floating didn't make
+    the layout very robust: if the text and image heights were off then the
+    layout broke. Although I despise tables with a passion I prefer a
+    functioning layout.
 
+    Text is contained in a <td class="text"> tag so I can differentiate between
+    cells with image and cells with text; that way each can get their own
+    styling.
+
+    <h3> was used for entry headers (along with custom styling) because the
+    text is the right size and comes bolded. I suppose I could just use a div
+    with 125% font size and bold font weight.
+    -->
     <section id="games">
-    <p>I primarily make video games! Here are the ones I've released so far.</p>
+    <p>Primarily I make video games; here are a few that I've released:</p>
     <table class="projectboxtop"><tr>
         <td><img src="portraits/iccc.png"></td>
         <td class="text">
@@ -110,9 +120,16 @@
 
 
 
+    <!--
+    <h3> was used for entry headers (along with custom styling) because the
+    text is the right size and comes bolded. I suppose I could just use a div
+    with 125% font size and bold font weight.
+
+    A table was used for this section for the collapsable borders.
+    -->
     <section id="utilities">
         <p>I make utilities and libraries to fill my needs; here are a bunch that I've coded.</p>
-        <table class="utils"><tbody>
+        <table id="utilstab"><tbody>
         <tr><td>
             <h3>Atom Plugins</h3>
             <p>I use <a href="https://atom.io/">Atom</a>, the text editor, a lot so I've made a couple plugins for it. language-batch provides syntax highlighting for Windows Batch files. love-launcher launches a <a href="http://love2d.org/">L&Ouml;VE</a> process for the current project.</p>
@@ -140,8 +157,8 @@
 
     <section id="transcriptions">
     <p>In my spare time I transcribe pieces of music; here are my works so far.</p>
-    <table class="transcriptions" style="width:800px;"><tbody>
-        <tr class="derp"><th>Title</th><th>Artist</th><th>From</th><th>Video</th><th>PDF</th><th>MIDI</th></tr>
+    <table id="transtab"><tbody>
+        <tr><th>Title</th><th>Artist</th><th>From</th><th>Video</th><th>PDF</th><th>MIDI</th></tr>
         <!-- generated with transform.py and transcriptions.txt -->
         <tr><td>Das Wandern</td><td>Kajiura Yuki</td><td>.hack//SIGN</td><td><a href='https://www.youtube.com/watch?v=oRDAg2-g-30'>Video</a></td><td><a href='https://dl.dropboxusercontent.com/u/17927728/Das-Wandern.pdf'>PDF</a></td><td><a href='https://dl.dropboxusercontent.com/u/17927728/Das-Wandern.mid'>MIDI</a></td></tr>
         <tr><td>The Bones of Jakobson</td><td>Jessica Curry</td><td>Dear Esther</td><td><a href='https://www.youtube.com/watch?v=x0eB1S2J_kw'>Video</a></td><td><a href='https://dl.dropboxusercontent.com/u/17927728/The-Bones-of-Jakobson.pdf'>PDF</a></td><td><a href='https://dl.dropboxusercontent.com/u/17927728/The-Bones-of-Jakobson.mid'>MIDI</a></td></tr>
@@ -166,20 +183,20 @@
     <p>The more tools you have at you're disposal the easier making video games becomes. Here are a bunch of resources that I've found useful over the years.</p>
 
     <h2>Engines</h2>
-    <table class="social"><tbody>
+    <table class="res"><tbody>
         <tr><td><a href="http://jmonkeyengine.org">jMonkeyEngine</a></td><td>3D video game engine coded in Java</td></tr>
         <tr><td><a href="http://love2d.org">L&Ouml;VE</a></td><td>easy-to-learn-and-use 2D game engine utilizing Lua</td></tr>
         <tr><td><a href="https://www.yoyogames.com/studio">GameMaker</a></td><td>Game making program for both the new and the experienced</td></tr>
     </tbody></table>
 
     <h2>Libraries</h2>
-    <table class="social"><tbody>
+    <table class="res"><tbody>
         <tr><td><a href="http://lwjgl.org">LWJGL</a></td><td>OpenGL, OpenAL, and OpenCL for Java</td></tr>
         <tr><td><a href="https://www.libsdl.org">SDL</a></td><td>C library for 2D graphics, input handling, and much more</td></tr>
     </tbody></table>
 
     <h2>Programs and Services</h2>
-    <table class="social"><tbody>
+    <table class="res"><tbody>
         <tr><td><a href="http://www.blender.org">Blender</a></td><td>3D Modelling</td><td>very powerful but very complicated</td></tr>
         <tr><td><a href="http://www.gimp.org">GIMP</a></td><td>Art (Bitmap)</td><td>all-purpose graphics editing and creation software</td></tr>
         <tr><td><a href="http://www.inkscape.org/en/">Inkscape</a></td><td>Art (Vector)</td><td>scalable vector graphics editor and creator</td></tr>
@@ -195,7 +212,6 @@
     </section>
 </main>
 
-</div>
-</body>
+</div></body>
 
 </html>
