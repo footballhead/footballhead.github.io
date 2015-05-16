@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head lang="en">
     <meta name="google-site-verification" content="DC0JeszsyA2v-ddTD5gU5zJsSUO36NWnd3NGz9uvTrM" />
     <meta charset="UTF-8">
     <meta name="description" content="Utilities and indie video games made by Michael Hitchens, a third year student at the University of Waterloo.">
@@ -54,12 +54,24 @@
     cells with image and cells with text; that way each can get their own
     styling.
 
+    This is a <table> so image positioning is pretty easy. To make the image
+    appear on the left place the <td><img></td> BEFORE the descriptive text. To
+    make the image appear on the right place the <td><img></td> AFTER the text.
+
     <h3> was used for entry headers (along with custom styling) because the
     text is the right size and comes bolded. I suppose I could just use a div
     with 125% font size and bold font weight.
     -->
     <section id="games">
     <p>Primarily I make video games; here are a few that I've released:</p>
+    <table class="projectboxtop"><tr>
+        <td class="text">
+            <h3>Hangman!</h3>
+            <p>Made in 72 hours for an internal hackathon at BlackBerry. It's the classic game Hangman where you try to guess a word letter by letter. Guess wrong too many times and you lose! The themes was "less effort, more screens" so I made an Android app.</p>
+            <p><a href="https://appworld.blackberry.com/webstore/content/59957346/">BlackBerry World</a></p>
+        </td>
+        <td><img src="portraits/hangman.png"></td>
+    </tr></table>
     <table class="projectboxtop"><tr>
         <td><img src="portraits/iccc.png"></td>
         <td class="text">
