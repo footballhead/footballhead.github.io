@@ -133,7 +133,7 @@ section {
 
     /* This table does not have enough content to fill the site layout width
      * of 800px so we must force it to use the right width. */
-    width: 800px;
+    width: 100%;
 }
 
 #socialtab td {
@@ -159,7 +159,8 @@ section {
 table.projectboxtop, table.projectboxbot {
     border-top: 1px dotted black;
     padding: 0.1em;
-    width: 800px;
+    width: 100%;
+
 }
 
 table.projectboxbot {
@@ -226,7 +227,7 @@ td.text p {
 #transtab {
     /* This table does not have enough content to fill the site layout width
      * of 800px so we must force it to use the right width. */
-    width: 800px;
+    width: 100%;
 
     border-top: 1px dotted black;
     border-bottom: 1px dotted black;
@@ -263,7 +264,7 @@ table.res {
 
     /* This table does not have enough content to fill the site layout width
      * of 800px so we must force it to use the right width. */
-    width: 800px;
+    width: 100%;
 }
 
 table.res td {
@@ -276,4 +277,20 @@ table.res td {
 table.res tr:hover {
     /* translucent black background on hover */
     background: rgba( 0, 0, 0, 0.1 );
+}
+
+@media (min-width: 810px) {
+
+    #app-container {
+        width: 800px;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 810px){
+
+    #app-container {
+        width: 600px;
+    }
+
 }
