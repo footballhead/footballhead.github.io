@@ -57,7 +57,7 @@ body {
     font-size: 12pt;
 }
 
-div.textbody {
+#app-container {
     /* All site content is contained within this div. This helps us control the
      * site width. We center it on the screen because it looks better. */
     width: 800px;
