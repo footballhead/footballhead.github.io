@@ -89,6 +89,7 @@ function MusicTableModel() {
     this.rows.push(new MusicModel("3EM12_SS_101_2femmes_option",   "Sagisu Shiro",     "Rebuild of Evangelion", "1aV5E0kohPM", "3EM12_SS_101_2femmes_option"));
 	this.rows.push(new MusicModel("Quelconque 103 (piano) =3EM08=","Sagisu Shiro",     "Rebuild of Evangelion", "U0H6MC5qAGk", "Quelconque_103_(piano)_=3EM08="));
     this.rows.push(new MusicModel("Overworld (Night)",             "Kozue Ishikawa",   "Wario Land 3",          "1v3mJqOCJ1c", "Overworld_(Night)"));
+	this.rows.push(new MusicModel("Goodnight",                     "Evanescence",      "Blitz Locals (Charity)",null,          "Goodnight"));
     //this.rows.push(new MusicModel("", "", "", "", ""));
 }
 
