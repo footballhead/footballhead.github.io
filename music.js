@@ -83,11 +83,16 @@ function MusicTableModel() {
     this.rows.push(new MusicModel("This Godforsaken Aerial",       "Jessica Curry",    "Dear Esther",           "RJUvkCJKNvk", "This-Godforsaken-Aerial"));
     this.rows.push(new MusicModel("Twenty One",                    "Jessica Curry",    "Dear Esther",           "ZHt4cth91II", "Twenty-One"));
     this.rows.push(new MusicModel("The Earth Prelude",             "Ludovico Einaudi", "Divenire",              "BoVVLvgbEI0", "The-Earth-Prelude"));
+    this.rows.push(new MusicModel("Opening",                       "Phillip Glass",    "Glassworks",            null,          "Opening"));
+    this.rows.push(new MusicModel("Home",                          "Disasterpeace",    "FEZ",                   null,          "Home"));
     this.rows.push(new MusicModel("Board Up the Windows",          "Jessica Curry",    "Korsakovia",            "rwc3TdAosJc", "Board-Up-the-Windows"));
     this.rows.push(new MusicModel("The Event",                     "Jessica Curry",    "Korsakovia",            "mX47nkkQUss", "The-Event"));
     this.rows.push(new MusicModel("Wet Hands",                     "C418",             "Minecraft",             "sWnMII3E5gA", "Wet-Hands"));
-    this.rows.push(new MusicModel("3EM12_SS_101_2femmes_option",   "Sagisu Shiro",     "Rebuild of Evangelion", "1aV5E0kohPM", "3EM12_SS_101_2femmes_option"));
+    this.rows.push(new MusicModel("Outlier",                       "65daysofstatic",   "No Man's Sky",          null,          "Outlier"));
+    this.rows.push(new MusicModel("Machiavellian Bach",            "Mike Morasky",     "Portal 2",              null,          "Machiavellian-Bach"));
+    this.rows.push(new MusicModel("L'Apotre de la Lune",           "Sagisu Shiro",     "Rebuild of Evangelion", "1aV5E0kohPM", "L'Apotre-de-la-Lune"));
 	this.rows.push(new MusicModel("Quelconque 103 (piano) =3EM08=","Sagisu Shiro",     "Rebuild of Evangelion", "U0H6MC5qAGk", "Quelconque_103_(piano)_=3EM08="));
+    this.rows.push(new MusicModel("Sunlit Garden",                 "Shinkichi Mitsumune","Revolutionary Girl Utena",null,      "Sunlit_Garden"));
     this.rows.push(new MusicModel("Overworld (Night)",             "Kozue Ishikawa",   "Wario Land 3",          "1v3mJqOCJ1c", "Overworld_(Night)"));
 	this.rows.push(new MusicModel("Goodnight",                     "Evanescence",      "Blitz Locals (Charity)",null,          "Goodnight"));
     //this.rows.push(new MusicModel("", "", "", "", ""));
