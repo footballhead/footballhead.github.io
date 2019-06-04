@@ -1,17 +1,4 @@
 /******************************************************************************
-    GENERAL NOTES
-
-      * website width is hard-coded to 800px
-      * font is Linux Libertine
-      * font size is 12pt
-      * use em instead of px where possible!
-          - exception is borders which are fine using px
-      * borders should be 2px dotted black
-      * table row hover accent is rgba(0,0,0,0.1)
-      * table td padding should be 0.1em on top and bottom
-******************************************************************************/
-
-/******************************************************************************
     SERVER-SIDE FONT
 
     I like Linux Libertine so much that I try to force the client to use it.
@@ -63,8 +50,7 @@
 body {
     /*seamless paper texture from subtlepatterns.com */
     background-image: url('seamless_paper_texture.png');
-    font-family: Linux Libertine, serif;
-    font-size: 12pt;
+    font: 14pt/130% Linux Libertine, serif;
 }
 
 #app-container {
@@ -84,11 +70,7 @@ a:hover {
 }
 
 section {
-    /* Sections start off as hidden. When the page is loaded it triggers the
-     * transition to display the Contact section. Clicking the links resets the
-     * section style to this while transitioning to the new style. */
-    display: none;
-    opacity: 1;
+    margin-bottom: 5em;
 }
 
 /******************************************************************************
@@ -96,70 +78,32 @@ section {
 ******************************************************************************/
 
 #name {
+    font: bold 225%/130% Linux Libertine, serif;
     padding-top: 1em;
-    margin-bottom: 0em;
-
-    font-size: 200%;
-    font-weight: bold;
-
+    margin-bottom: 0.1em;
     text-align: center;
 }
 
 #subheader {
+    font: italic 125%/130% Linux Libertine, serif;
     text-align: center;
-    margin: 0px;
+    margin-top: 0.1em;
+    margin-bottom: 1em;
 }
 
-/******************************************************************************
-    NAVBAR STYLING
-******************************************************************************/
-
-#linkbar {
-    /* Here the extra margin and padding help keep the header, navigation, and
-     * content sections visually separate and distinct. */
-    margin-top: 2em;
+#social {
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2em;
-
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
-
     text-align: center;
-
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
 }
 
-/******************************************************************************
-    SOCIAL/CONTACT STYLING
-******************************************************************************/
-
-#socialtab {
-    /* Without border collapse we don't get a solid hover highlight running
-     * across the table, which looks gross. */
-    border-collapse: collapse;
-
-    border-top: 1px dotted black;
-    border-bottom: 1px dotted black;
-
-    /* This table does not have enough content to fill the site layout width
-     * of 800px so we must force it to use the right width. */
-    width: 100%;
-}
-
-#socialtab td {
-    vertical-align: middle;
-
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
-}
-
-#socialtab tr:hover {
-    /* translucent black background on hover */
-    background: rgba( 0, 0, 0, 0.1 );
-}
-
-#socialtab img {
-    vertical-align: bottom;
+#social img {
+    vertical-align: center;
 }
 
 /******************************************************************************
@@ -208,8 +152,7 @@ td.text p {
 #utilstab td {
     /* Padding is greater to space elements and reduce visual clutter making
      * the section easier to read. */
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 0.5em;
 
     border-top: 1px dotted black;
     border-bottom: 1px dotted black;
@@ -248,7 +191,7 @@ td.text p {
 }
 
 #transtab th {
-    /* The default <th> styling looks bad; override. */
+    /* The default <th> styling looks bad... override. */
     text-align: left;
     border-bottom: 1px dotted black;
 }
@@ -257,50 +200,15 @@ td.text p {
     background: rgba( 0, 0, 0, 0.1 );
 }
 
-/******************************************************************************
-    RESOURCES
-
-    We don't use ID styling here because we have at least 3 tables with the
-    same styling. Otherwise we are copy-pasted from SOCIAL/CONTACT.
-******************************************************************************/
-
-table.res {
-    /* Without border collapse we don't get a solid hover highlight running
-     * across the table, which looks gross. */
-    border-collapse: collapse;
-
-    border-top: 1px dotted black;
-    border-bottom: 1px dotted black;
-
-    /* This table does not have enough content to fill the site layout width
-     * of 800px so we must force it to use the right width. */
-    width: 100%;
-}
-
-table.res td {
-    vertical-align: middle;
-
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
-}
-
-table.res tr:hover {
-    /* translucent black background on hover */
-    background: rgba( 0, 0, 0, 0.1 );
-}
 
 @media (min-width: 810px) {
-
     #app-container {
         width: 800px;
     }
-
 }
 
-@media (min-width: 600px) and (max-width: 810px){
-
+@media (min-width: 600px) and (max-width: 810px) {
     #app-container {
         width: 600px;
     }
-
 }

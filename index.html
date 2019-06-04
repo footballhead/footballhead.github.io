@@ -10,39 +10,23 @@
     <title>Michael Hitchens&mdash;Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" src="tab-model.js"></script>
-    <script type="text/javascript" src="tab-view.js"></script>
-    <script type="text/javascript" src="site.js"></script>
     <script type="text/javascript" src="music.js"></script>
 </head>
 
-<body><div id="app-container" style="display:none;">
+<body><div id="app-container">
 
 <header>
-    <div id="name">Michael Hitchens</div>
-    <div id="subheader">Bachelor of Computer Science from the University of Waterloo</div>
+    <h1 id="name">Michael Hitchens</h1>
+    <div id="subheader">BCS from UWaterloo</div>
+    <div id="social">
+        <img src="social/email.png"> <a href="mailto:mdhitchens@gmail.com">Email</a> &#8226;
+        <img src="social/linkedin.png"> <a href="https://www.linkedin.com/in/michael-hitchens-b3a675105">LinkedIn</a> &#8226;
+        <img src="social/github.png"> <a href="https://github.com/footballhead">GitHub</a> &#8226;
+        <img src="social/tumblr.png"> <a href="http://44dagainagain.tumblr.com">Blog</a>
+    </div>
 </header>
 
-<nav><div id="linkbar">
-    <a href='#' id="gamesLink">Games</a> &#8226;
-    <a href='#' id="utilitiesLink">Projects</a> &#8226;
-    <a href='#' id="transcriptionsLink">Sheet Music</a> &#8226;
-    <a href='#' id="resourcesLink">Resources</a> &#8226;
-    <a href='#' id="socialLink">Links &amp; Contact</a>
-</div></nav>
-
 <main>
-    <section id="social">
-    <table id="socialtab"><tbody>
-        <tr><td><img src="social/email.png"> <a href="mailto:mdhitchens@gmail.com">Email</a></td><td>mdhitchens at gmail dot com</td></tr>
-        <tr><td><img src="social/linkedin.png"> <a href="https://www.linkedin.com/in/michael-hitchens-b3a675105">LinkedIn</a></td><td>Professional profile</td></tr>
-        <tr><td><img src="social/github.png"> <a href="https://github.com/footballhead">GitHub</a></td><td>Personal source code repository</td></tr>
-        <tr><td><img src="social/tumblr.png"> <a href="http://44dagainagain.tumblr.com">Blog</a></td><td>For long-form articles</td></tr>
-        <tr><td><img src="social/soundcloud.ico"> <a href="https://soundcloud.com/michael-hitchens">SoundCloud</a></td><td>Host for compositions</td></tr>
-    </tbody></table>
-    </section>
-
-
     <!--
     The structure of the code for the layout of the games section is different
     from the rest in that each entry is a new table. This helps support the
@@ -65,10 +49,11 @@
     with 125% font size and bold font weight.
     -->
     <section id="games">
+    <a id="games"></a><h2>Games</h2>
     <table class="projectboxtop"><tr>
         <td class="text">
             <h3>Get Away From My Cake!</h3>
-			<p>Made in a month for the graphics course at UWaterloo (CS 488). Due to the nature of the project, I had to put more focus on the graphics (e.g. normal mapping, particle systems, etc). However, I managed to pull together something playable.</p>
+			<p>Made in a month for CS 488 at UWaterloo. Due to the nature of the project, I had to put more focus on the graphics (e.g. normal mapping, particle systems, etc). However, I managed to pull together something playable.</p>
             <p><a href="https://44d-again-again.itch.io/get-away-from-my-cake">Download on itch.io</a></p>
         </td>
         <td><img src="portraits/cake3d.png"></td>
@@ -85,38 +70,25 @@
     <table class="projectboxtop"><tr>
         <td class="text">
             <h3>ICCC (LD30)</h3>
-            <p>Made in 72 hours for Ludum Dare 30. Work for the (I)nternational (C)ommunication (C)onstruction and (C)onsulting! Use communication to spread your political agenda by connecting the world with the internet and shoving your message down the pipe! Beware of your demanding company, bankruptcy, and easy to piss off locals!</p>
+            <p>Made in 72 hours for Ludum Dare 30. Work for the (I)nternational (C)ommunication (C)onstruction and (C)onsulting! Use communication to spread your political agenda by connecting the world with the internet and shoving your message down the pipe! Beware of bankruptcy, your demanding company, and easy-to-piss-off locals!</p>
             <p><a href="https://44d-again-again.itch.io/iccc">Download on itch.io</a></p>
         </td>
         <td><img src="portraits/iccc.png"></td>
     </tr></table>
-    <table class="projectboxtop"><tr>
+    <table class="projectboxbot"><tr>
         <td><img src="portraits/ld24.png"></td>
         <td class="text">
             <h3>Evolution is the Key (LD24)</h3>
-            <p>Made in 72 hours for Ludum Dare 24. You are trapped in a maze that constantly evolves around you. Made in Java with LWJGL. Use WASD to move, MOUSE to look, and the LEFT MOUSE BUTTON to fire your weapon. Scored #2 in Theme, #3 in Innovation.</p>
+            <p>Made in 72 hours for Ludum Dare 24 .Scored #2 in Theme, #3 in Innovation. You are trapped in a maze that constantly evolves around you. Can you evolve enough to escape?</p>
             <p><a href="https://44d-again-again.itch.io/evolution-is-the-key">Download on itch.io</a></p>
-        </td>
-    </tr></table>
-    <table class="projectboxtop"><tr>
-        <td class="text">
-            <h3>SDL Snake</h3>
-            <p>It's snake! Made in C! Using SDL! Programmed in one weekend in May 2013. Windows download requires the Visual C++ 2012 Redistributable which can be found <a href="http://www.microsoft.com/en-ca/download/details.aspx?id=30679">here</a>. Can be compiled for Linux and Mac; tested under Wine 1.7.25.</p>
-            <p><a href="https://44d-again-again.itch.io/sdl-snake">Download on itch.io</a></p>
-        </td>
-		<td><img src="portraits/snake.png"></td>
-    </tr></table>
-    <table class="projectboxtop"><tr>
-        <td><img src="portraits/portal-gm.png"></td>
-        <td class="text">
-            <h3>Portal GM: Pre-Slice</h3>
-            <p>Portal is my favourite video game so I tried to make a 2D version. There's no sound because I didn't know about SFXR back then. Made with GameMaker. Previously hosted on the YoYo Games Sandbox. Released May 2008. Only compiled for Windows, but works under Wine 1.7.25.</p>
-            <p><a href="https://44d-again-again.itch.io/portal-gm-pre-slice">Download on itch.io</a></p>
         </td>
     </tr></table>
     </section>
 
-
+    <section id="transcriptions">
+        <a id="sheet-music"></a><h2>Sheet Music</h2>
+        <!-- generated by javascript -->
+    </section>
 
     <!--
     <h3> was used for entry headers (along with custom styling) because the
@@ -126,6 +98,7 @@
     A table was used for this section for the collapsable borders.
     -->
     <section id="utilities">
+        <a id="projects"></a><h2>Other Projects</h2>
         <table id="utilstab"><tbody>
         <tr><td>
             <h3>This Website</h3>
@@ -133,65 +106,11 @@
             <p><a href="https://github.com/footballhead/hitchport">Source</a></p>
         </td></tr>
         <tr><td>
-            <h3>Atom Plugins</h3>
-            <p>I use <a href="https://atom.io/">Atom</a>, the text editor, a lot so I've made a couple plugins for it. language-batch provides syntax highlighting for Windows Batch files. love-launcher launches a <a href="http://love2d.org/">L&Ouml;VE</a> process for the current project.</p>
-            <p><a href="https://atom.io/packages/language-batch">language-batch</a> &#8226; <a href="https://atom.io/packages/love-launcher">love-launcher</a></p>
-        </td></tr>
-        <tr><td>
-            <h3>Zardwars Revival</h3>
-            <p>An encyclopedia for a now dead game. I coded the HTML, CSS, and PHP. All the information on the site was obtained by playing the game (when it was still alive).</p>
-            <p><a href='http://zardwarsrevival.nfshost.com/'>Website</a> &#8226; <a href='https://github.com/footballhead/zardwars-revival'>Source</a></p>
-        </td></tr>
-        <tr><td>
             <h3>Vampyr Utils</h3>
             <p>Utilities for decoding various files used by <a href="https://archive.org/details/VampyrTheTalismanOfInvocation">Vampyr: The Talisman of Invocation</a>. Coded in Java. I used these utilities to decode the image and map files which I then put into albums; I've provided links below.</p>
             <p><a href="https://github.com/footballhead/vampyr-utils">Source</a> &#8226; <a href="http://imgur.com/a/Umczx">Image album</a> &#8226; <a href="http://imgur.com/a/fwRrs">Map album</a></p>
         </td></tr>
         </tbody></table>
-    </section>
-
-
-
-    <section id="transcriptions">
-        <!-- generated by javascript -->
-    </section>
-
-
-
-    <section id="resources">
-    <p>Here are a bunch of resources I've fallen in love with:</p>
-
-    <h2>Engines</h2>
-    <table class="res"><tbody>
-		<tr><td><a href="http://www.lexaloffle.com/pico-8.php">PICO-8</a></td><td>retro-style engine for simple arcade games</td></tr>
-        <tr><td><a href="http://love2d.org">L&Ouml;VE</a></td><td>easy-to-learn-and-use 2D game engine utilizing Lua</td></tr>
-		<tr><td><a href="http://jmonkeyengine.org">jMonkeyEngine</a></td><td>3D video game engine coded in Java</td></tr>
-        <tr><td><a href="https://www.yoyogames.com/studio">GameMaker</a></td><td>game making program for both the new and the experienced</td></tr>
-    </tbody></table>
-
-    <h2>Libraries</h2>
-    <table class="res"><tbody>
-		<tr><td><a href="https://www.libsdl.org">SDL</a></td><td>C library for 2D graphics, input handling, and much more</td></tr>
-        <tr><td><a href="http://lwjgl.org">LWJGL</a></td><td>OpenGL, OpenAL, and OpenCL for Java</td></tr>
-    </tbody></table>
-
-    <h2>Programs and Services</h2>
-    <table class="res"><tbody>
-		<tr><td><a href="http://www.synfig.org">Synfig</a></td><td>2D Animation</td><td>very high learning curve but free and great for small animations</td></tr>
-        <tr><td><a href="http://www.blender.org">Blender</a></td><td>3D Modelling</td><td>very complicated but very powerful</td></tr>
-        <tr><td><a href="http://www.gimp.org">GIMP</a></td><td>Art (Bitmap)</td><td>all-purpose graphics editing and creation software</td></tr>
-        <tr><td><a href="http://www.inkscape.org/en/">Inkscape</a></td><td>Art (Vector)</td><td>scalable vector graphics editor and creator</td></tr>
-        <tr><td><a href="http://web.audacityteam.org/">Audacity</a></td><td>Audio Editor</td><td>popular FOSS sound editor</td></tr>
-        <tr><td><a href="http://www.mapeditor.org/">Tiled</a></td><td>Level Editor</td><td>general-purpose 2D level editor</td></tr>
-		<tr><td><a href="http://lmms.io">LMMS</a></td><td>MIDI Sequencer</td><td>difficult to use but free music creator</td></tr>
-        <tr><td><a href="http://famitracker.com">FamiTracker</a></td><td>Music</td><td>program for creating SNES music</td></tr>
-        <tr><td><a href="http://incompetech.com">Incompetech</a></td><td>Music</td><td>website with lots of high quality royalty-free music</td></tr>
-        <tr><td><a href="http://musesore.org">MuseScore</a></td><td>Music Notation</td><td>open source music notation software</td></tr>
-        <tr><td><a href="http://www.drpetter.se/project_sfxr.html">SFXR</a></td><td>Sound Effects</td><td>SNES-inspired sound effects generator</td></tr>
-        <tr><td><a href="https://atom.io">Atom</a></td><td>Text Editor</td><td>highly configurable advanced text editor; almost an IDE</td></tr>
-        <tr><td><a href="http://notepad-plus-plus.org">Notepad++</a></td><td>Text Editor</td><td>fast and reliable advanced text editor for Windows</td></tr>
-        <tr><td><a href="http://www.sublimetext.com">Sublime Text</a></td><td>Text Editor</td><td>small, slick, sexy, and fast advanced text editor</td></tr>
-    </tbody></table>
     </section>
 </main>
 
