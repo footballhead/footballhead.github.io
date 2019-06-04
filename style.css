@@ -50,7 +50,7 @@
 body {
     /*seamless paper texture from subtlepatterns.com */
     background-image: url('seamless_paper_texture.png');
-    font: 14pt/130% Linux Libertine, serif;
+    font: 13pt/130% Linux Libertine, serif;
 }
 
 #app-container {
@@ -69,8 +69,10 @@ a:hover {
     color: #999999;
 }
 
-section {
-    margin-bottom: 5em;
+h2 {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 /******************************************************************************
