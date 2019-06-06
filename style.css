@@ -179,7 +179,7 @@ td.text p {
     TRANSCRIPTIONS
 ******************************************************************************/
 
-#transtab {
+#transtab, #ebooks table {
     /* This table does not have enough content to fill the site layout width
      * of 800px so we must force it to use the right width. */
     width: 100%;
@@ -192,12 +192,12 @@ td.text p {
     border-collapse: collapse;
 }
 
-#transtab th {
+#transtab th, #ebooks th {
     /* The default <th> styling looks bad... override. */
     text-align: left;
     border-bottom: 1px dotted black;
 }
 
-#transtab tr:hover {
+#transtab tr:hover, #ebooks tr:hover, {
     background: rgba( 0, 0, 0, 0.1 );
 }
