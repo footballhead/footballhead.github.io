@@ -107,15 +107,18 @@ h2 {
     GAMES STYLING
 ******************************************************************************/
 
-table.projectboxtop, table.projectboxbot {
+#games table {
     border-top: 1px dotted black;
     padding: 0.1em;
     width: 100%;
-
 }
 
-table.projectboxbot {
+#games table.bottom {
+    border-top: 1px dotted black;
     border-bottom: 1px dotted black;
+    padding: 0.1em;
+    width: 100%;
+
 }
 
 td.text {
