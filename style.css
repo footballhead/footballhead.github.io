@@ -124,16 +124,16 @@ hr {
 }
 
 
-#transcriptions table, #ebooks table {
+#transcriptions table {
     width: 100%;
     border-top: 1px dotted black;
     border-bottom: 1px dotted black;
     border-collapse: collapse;
 }
-#transcriptions th, #ebooks th {
+#transcriptions th {
     text-align: left;
     border-bottom: 1px dotted black;
 }
-#transcriptions tr:hover, #ebooks tr:hover {
+#transcriptions tr:hover {
     background: rgba( 0, 0, 0, 0.1 );
 }
