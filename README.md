@@ -14,8 +14,6 @@ Upload the following to your host of choice:
 * `portraits/*.png`
 * `social/*.png`
 * `index.html`
-* `main.js`
-* `music.js`
 * `seamless_paper_texture.png`
 * `style.css`
 
