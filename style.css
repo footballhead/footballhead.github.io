@@ -108,29 +108,26 @@ h2 {
 ******************************************************************************/
 
 #games table {
-    border-top: 1px dotted black;
-    padding: 0.1em;
     width: 100%;
-}
-
-#games table.bottom {
-    border-top: 1px dotted black;
-    border-bottom: 1px dotted black;
-    padding: 0.1em;
-    width: 100%;
-
-}
-
-#games h3 {
-    margin-top: 0px;
 }
 
 #games td {
     vertical-align: top;
 }
 
-#games td p {
+#games h3 {
+    margin-top: 0em;
+    margin-left: 0.25em;
+}
+
+#games p {
     margin-bottom: 0em;
+    margin-left: 0.25em;
+}
+
+#games hr {
+    border: none;
+    border-top: 1px dotted black;
 }
 
 /******************************************************************************
