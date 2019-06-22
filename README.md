@@ -1,7 +1,11 @@
 # Michael Hitchens's Portfolio
 
-This is the source code to my website (currently at www.michaelhitchens.com).
+The source code to my portfolio website.
+
+Hosted at www.michaelhitchens.com.
+
+Preview master at https://footballhead.github.io/hitchport/.
 
 ## License
 
-MIT; see `LICENSE`.
+MIT. See [LICENSE](LICENSE)
