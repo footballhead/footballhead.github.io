@@ -85,13 +85,13 @@ hr {
     margin-bottom: 0.1em;
     text-align: center;
 }
-
 #subheader {
     font: italic 125%/130% Linux Libertine, serif;
     text-align: center;
     margin-top: 0.1em;
     margin-bottom: 2em;
 }
+
 
 #social {
     margin-left: auto;
@@ -103,56 +103,37 @@ hr {
     padding-top: 0.2em;
     padding-bottom: 0.2em;
 }
-
 #social img {
     vertical-align: center;
 }
 
-/******************************************************************************
-    GAMES STYLING
-******************************************************************************/
 
 #games table {
     width: 100%;
 }
-
 #games td {
     vertical-align: top;
 }
-
 #games h3, #other h3 {
     margin-top: 0em;
     margin-left: 0.25em;
 }
-
 #games p, #other p {
     margin-bottom: 0em;
     margin-left: 0.25em;
 }
 
-/******************************************************************************
-    TRANSCRIPTIONS
-******************************************************************************/
 
-#transtab, #ebooks table {
-    /* This table does not have enough content to fill the site layout width
-     * of 800px so we must force it to use the right width. */
+#transcriptions table, #ebooks table {
     width: 100%;
-
     border-top: 1px dotted black;
     border-bottom: 1px dotted black;
-
-    /* Without border collapse we don't get a solid hover highlight running
-     * across the table, which looks gross. */
     border-collapse: collapse;
 }
-
-#transtab th, #ebooks th {
-    /* The default <th> styling looks bad... override. */
+#transcriptions th, #ebooks th {
     text-align: left;
     border-bottom: 1px dotted black;
 }
-
-#transtab tr:hover, #ebooks tr:hover, {
+#transcriptions tr:hover, #ebooks tr:hover {
     background: rgba( 0, 0, 0, 0.1 );
 }
