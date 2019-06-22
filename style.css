@@ -121,20 +121,15 @@ h2 {
 
 }
 
-td.text {
+#games h3 {
+    margin-top: 0px;
+}
+
+#games td {
     vertical-align: top;
-
-    /* The extra padding, in this case, make the entries look better. */
-    padding-left: 0.5em;
-    padding-right: 0.5em;
 }
 
-td.text h3 {
-    margin: 0px;
-}
-
-td.text p {
-    margin-top: 1em;
+#games td p {
     margin-bottom: 0em;
 }
 
