@@ -1,15 +1,11 @@
 /******************************************************************************
     SERVER-SIDE FONT
 
-    I like Linux Libertine so much that I try to force the client to use it.
-    Fallback (defined in body) is generic serif.
+    I want to use Linux Libertine and it's not on Google Fonts so here we are.
 
-    Each style needs its own entry. I use two styles (normal and bolded) thus
-    I have two entries. Each points to the font files for that style.
-
-    EOT files are for Internet Explorer.
-    SVG files are for Safari.
-    WOFF and TTF are for the rest.
+    EOT for Internet Explorer.
+    SVG for Safari.
+    WOFF/TTF for the Firefox, Chrome, etc.
 ******************************************************************************/
 
 @font-face {
@@ -48,7 +44,6 @@
 ******************************************************************************/
 
 body {
-    /*seamless paper texture from subtlepatterns.com */
     background-image: url('seamless_paper_texture.png');
     font: 13pt/130% Linux Libertine, serif;
 }
