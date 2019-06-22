@@ -70,6 +70,11 @@ h2 {
     margin-bottom: 1em;
 }
 
+hr {
+    border: none;
+    border-top: 1px dotted black;
+}
+
 /******************************************************************************
     HEADER STYLING
 ******************************************************************************/
@@ -115,54 +120,14 @@ h2 {
     vertical-align: top;
 }
 
-#games h3 {
+#games h3, #other h3 {
     margin-top: 0em;
     margin-left: 0.25em;
 }
 
-#games p {
+#games p, #other p {
     margin-bottom: 0em;
     margin-left: 0.25em;
-}
-
-#games hr {
-    border: none;
-    border-top: 1px dotted black;
-}
-
-/******************************************************************************
-    UTILITIES
-******************************************************************************/
-
-#utilstab {
-    border-top: 1px dotted black;
-    border-bottom: 1px dotted black;
-
-    border-collapse: collapse;
-}
-
-#utilstab td {
-    /* Padding is greater to space elements and reduce visual clutter making
-     * the section easier to read. */
-    padding: 0.5em;
-
-    border-top: 1px dotted black;
-    border-bottom: 1px dotted black;
-}
-
-#utilstab h3 {
-    /* Normally headers have no margin on the top and some margin on the
-     * bottom. I want it the other way around (margin on top, none on bottom).
-     * Since the top margin is already taken care of by the <td> styling I can
-     * safely just set it to 0. */
-    margin: 0em;
-}
-
-#utilstab p {
-    /* In the same vein as <h3> we want to reverse top and bottom margin to
-     * make layout work better. */
-    margin-top: 1em;
-    margin-bottom: 0em;
 }
 
 /******************************************************************************
