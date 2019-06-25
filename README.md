@@ -4,7 +4,7 @@ The source code for my portfolio website.
 
 Hosted at www.michaelhitchens.com.
 
-Preview master at https://footballhead.github.io/hitchport/.
+Preview master at https://footballhead.github.io/.
 
 ## Deploying
 
