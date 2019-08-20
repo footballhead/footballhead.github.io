@@ -2,7 +2,7 @@
 
 The source code for my portfolio website.
 
-Hosted at www.michaelhitchens.com.
+Hosted at http://www.michaelhitchens.com.
 
 Preview master at https://footballhead.github.io/.
 
@@ -19,6 +19,9 @@ Upload the following to your host of choice:
 
 The _Sheet Music_ section references PDF and MIDI files that must be uploaded to
 the `music/` directory. Those files are not included in this repo.
+
+The _eBooks_ section references documents that must be uploaded to the `books/`
+directory. Those files are also not included in this repo.
 
 ## License
 
