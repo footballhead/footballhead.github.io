@@ -124,16 +124,16 @@ hr {
 }
 
 
-#transcriptions table, #ebooks table {
+#sheet-music table, #ebooks table {
     width: 100%;
     border-top: 1px dotted black;
     border-bottom: 1px dotted black;
     border-collapse: collapse;
 }
-#transcriptions th, #ebooks th {
+#sheet-music th, #ebooks th {
     text-align: left;
     border-bottom: 1px dotted black;
 }
-#transcriptions tr:hover, #ebooks tr:hover {
+#sheet-music tr:hover, #ebooks tr:hover {
     background: rgba( 0, 0, 0, 0.1 );
 }
