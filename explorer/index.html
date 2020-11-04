@@ -29,22 +29,27 @@
     <h2>Files</h2>
     <table style="width:100%;"><tbody>
         <tr><th>File</th><th>Description</th></tr>
+        <tr><td><a href="#cgamask_pic">CGAMASK.PIC</a></td><td><strong>Missing file!</strong> Transparency data for <code>CGAMON.PIC</code></td></tr>
         <tr><td><a href="#cgamon_pic">CGAMON.PIC</a></td><td>CGA monster graphics</td></tr>
         <tr><td><a href="#cgapics_pic">CGAPICS.PIC</a></td><td>CGA tileset graphics</td></tr>
         <tr><td><a href="#dungeon_ovr">DUNGEON.OVR</a></td><td>text file, introduction to the "Dungeon of the Beast" adventure. OVR = overview?</td></tr>
-        <tr><td>DUNGEON.RMS</td><td>binary, "Dungeon of the Beast" room data. RMS = rooms?</td></tr>
-        <tr><td>EGAMASKS.PIC</td><td>Something EGA graphics related?</td></tr>
+        <tr><td><a href="#dungeon_rms">DUNGEON.RMS</a></td><td>binary, "Dungeon of the Beast" room data. RMS = rooms?</td></tr>
+        <tr><td><a href="#egamasks_pic">EGAMASKS.PIC</a></td><td><strong>Unused</strong></td></tr>
         <tr><td><a href="#egapics_pic">EGAPICS.PIC</a></td><td>EGA tileset graphics</td></tr>
         <tr><td><a href="#explorer_dsc">EXPLORER.DSC</a></td><td>text file, Instructions screen text accessible from main menu</td></tr>
         <tr><td><a href="#explorer_exe">EXPLORER.EXE</a></td><td>16-bit DOS exeutable, made with Borland technology</td></tr>
         <tr><td>EXPLORER.ICO</td><td>Windows 3.0 icon</td></tr>
         <tr><td>EXPLORER.TXT</td><td>README</td></tr>
-        <tr><td>PYMASK.PIC</td><td>???</td></tr>
-        <tr><td>PYMON.DAT</td><td>???</td></tr>
+        <tr><td><a href="#pymask_pic">PYMASK.PIC</a></td><td>Transparency data for <code>PYMON.PIC</code></td></tr>
+        <tr><td><a href="#pymon_dat">PYMON.DAT</a></td><td>Monster data</td></tr>
         <tr><td><a href="#pymon_pic">PYMON.PIC</a></td><td>EGA monster graphics</td></tr>
         <tr><td>README.1ST</td><td>Smaller README</td></tr>
         <tr><td>ROCON.DCH</td><td>Included save character with equipment, some areas cleared. DCH = Dungeon (of the Beast) CHaracter</td></tr>
     </tbody></table>
+
+    <h3 id="cgamask_pic">CGAMASK.PIC</h3>
+    <p><strong>Missing file!</strong> Referenced by <code>EXPLORER.EXE</code> but not present in the ZIP. This is why CGA mode crashes.</p>
+    <p>Could probably be recreated from <code>PYMASKS.PIC</code></p>
 
     <h3 id="cgamon_pic">CGAMON.PIC</h3>
     <table style="margin-left:auto; margin-right:auto; text-align:center;"><tbody>
@@ -232,6 +237,19 @@
     <div style="margin-left:auto; margin-right:auto; text-align:center;"><img alt="" src="explorer_005.png"/></div>
 
     <h3 id="dungeon_rms">DUNGEON.RMS</h3>
+    <p>Room data, stored in binary as an array of Pascal records:</p>
+    <pre>type
+    RoomData = record
+        A: byte; { unknown }
+        Tiles: array [1..8*20] of byte;
+        Objects: array [1..8*20] of byte;
+        ...
+        Name: string[26];
+    end;</pre>
+
+    <h3 id="egamasks_pic">EGAMASKS.PIC</h3>
+    <p>Unused, not loaded by the game. Format is different than CGA or EGA, but still might be closer to <a href="#ega_pic_format">EGA</a> than anything. Could have been earlier versions of tile masks in <code>EGAPICS.PIC</code>, or maybe used for blending between two tiles (some of them put together in a 2x2 grid look like they form a circle?). Here's sorta what it looks like:</p>
+    <div style="margin-left:auto; margin-right:auto; text-align:center;"><img alt="" src="egamasks.png"/></div>
 
     <h3 id="egapics_pic">EGAPICS.PIC</h3>
     <table style="margin-left:auto; margin-right:auto; text-align:center;"><tbody>
@@ -357,6 +375,31 @@
         <li><a href="https://winworldpc.com/product/turbo-pascal/5x">Borland Turbo Pascal 5.X downloads from winworldpc.com</a></li>
     </ul>
 
+    <h3 id="pymask_pic">PYMASK.PIC</h3>
+    <p>Transparency data for <code>PYMON.PIC</code>. Uses <a href="#ega_pic_format">EGA</a> storage format, except each channel is identical. Black means opaque, white means transparent.</p>
+
+    <h3 id="pymon_dat">PYMON.DAT</h3>
+    <p>Monster statistics, encoded in binary as an array of Pascal records:</p>
+    <pre>type
+    PyMonDat = record
+        Name: string[15];
+        Level: byte;
+        A: byte;
+        Exp: byte;
+        C: byte;
+        E: byte;
+        F: byte;
+        Id: byte;
+        H: byte;
+        I: byte;
+        J: byte;
+        K: byte;
+        L: byte;
+        M: byte;
+        N: byte;
+        O: byte;
+    end;</pre>
+
     <h3 id="pymon_pic">PYMON.PIC</h3>
     <table style="margin-left:auto; margin-right:auto; text-align:center;"><tbody>
         <tr>
@@ -427,17 +470,39 @@
     
     <h3>CGA</h3>
     <div style="margin-left:auto; margin-right:auto; text-align:center;"><img alt="" src="explorer_015.png"/></div>
-    <p>CGA uses 2bit color. Monsters use <code>CGAMON.PIC</code> and tiles use <code>CGAPICS.PIC</code>. CGA crashes trying to display monsters. Compared to EGA, there's less space for text at the bottom so the room name is not displayed.</p>
+    <p>CGA uses 2bit color. Monsters use <code>CGAMON.PIC</code>/<code>CGAMASK.PIC</code> and tiles use <code>CGAPICS.PIC</code>. CGA crashes trying to display monsters because <code>CGAMASK.PIC</code> is missing. Compared to EGA, there's less space for text at the bottom so neither the room name nor monster details are displayed.</p>
 
     <h3>EGA</h3>
     <div style="margin-left:auto; margin-right:auto; text-align:center;"><img alt="" src="explorer_016.png"/></div>
-    <p>EGA uses 4bit color. Monsters use <code>PYMON.PIC</code> and tiles use <code>EGAPICS.PIC</code>. The main game uses 640x200 with double-height aspect ratio (effectively 640x400).</p>
+    <p>EGA uses 4bit color. Monsters use <code>PYMON.PIC</code>/<code>PYMASK.PIC</code> and tiles use <code>EGAPICS.PIC</code>. The main game uses 640x200 with double-height aspect ratio (effectively 640x400).</p>
 
     <h2 id="cga_pic_format">CGA PIC Format</h2>
     <p>Each pixel is a half-nibble (2 bits) that corresponds to the CGA palette. Stored row-major. Pixels organized into 16x16 chunks, so they take 64 bytes (with half-nibble packing). The actual image is 15x15 so the top and right 1px sides are garbage and can be ignored. While each image only takes 64 bytes, they are aligned on the 256 byte boundary; everything between 64 and 256 are garbage and can be ignored.</p>
 
     <h2 id="ega_pic_format">EGA PIC Format</h2>
     <p>Uses same principles as <a href="#cga_pic_format">CGA</a> with a twist. Each image takes 256 bytes but, unlike CGA, all bytes are used. That's because, essentially, the color channels are split across interleaved color channel rows. It basically looks like there are 4 black and white copies of the image. The final EGA image must be reconstructued by overlaying the rows.</p>
+
+    <h2>Tile Descriptions</h2>
+    <p>Tile descriptions start at <code>data:0010</code> (there's only one data segment for Pascal programs) and is an <code>array[1..84] of string[15]</code> (empty descriptions are ommitted here):</p>
+    <table style="margin-left:auto; margin-right:auto; text-align:center;"><tbody>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics0.png"/></td><td>the floor</td></tr>
+        <tr><tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics1.png"/></td><td>sand</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics2.png"/></td><td>a wall</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics3.png"/></td><td>some vegetation</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics4.png"/></td><td>some water</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics12.png"/></td><td>an empty void</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics13.png"/></td><td>a force field</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics14.png"/></td><td>a wooden ship</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics15.png"/></td><td>a flying ship</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics16.png"/></td><td>a metal ship</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics18.png"/></td><td>some rubble</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics19.png"/></td><td>a statue</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics20.png"/></td><td>a trap</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics24.png"/></td><td>a weapon shop</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics25.png"/></td><td>an armor shop</td></tr>
+        <tr><td><img style="width:30px; height:30px;" alt="" src="egapics/egapics26.png"/></td><td>a key shop</td></tr>
+        <tr><td>...</td><td>(to be continued)</td></tr>
+    </tbody></table>
 
     <h2>Making our own adventure</h2>
     <p>You need two files:</p>
