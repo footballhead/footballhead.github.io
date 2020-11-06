@@ -26,6 +26,12 @@
     <p>But that doesn't mean that we can't make our own</p>
     <p>:D</p>
 
+
+    <h2>Tools</h2>
+    <p><strong>Source:</strong> <a href="https://github.com/footballhead/explorer-utils">https://github.com/footballhead/explorer-utils</a></p>
+    <p>While writing this guide, I made a bunch of tools to do file conversions, draw maps, etc. They are hosted on GitHub.</p>
+    <p>Using these tools, I've created an <a href="interactive/index.html">interactive webpage</a> of the Dungeon of the Beast adventure.</p>
+
     <h2>Files</h2>
     <table style="width:100%;"><tbody>
         <tr><th>File</th><th>Description</th></tr>
@@ -49,7 +55,7 @@
 
     <h3 id="cgamask_pic">CGAMASK.PIC</h3>
     <p><strong>Missing file!</strong> Referenced by <code>EXPLORER.EXE</code> but not present in the ZIP. This is why CGA mode crashes.</p>
-    <p>Could probably be recreated from <code>PYMASKS.PIC</code></p>
+    <p>I recreated this file from <code>PYMASKS.PIC</code> which can be downloaded here: <a href="https://github.com/footballhead/explorer-utils/blob/master/maskconv/CGAMASK.PIC">https://github.com/footballhead/explorer-utils/blob/master/maskconv/CGAMASK.PIC</a>.</p>
 
     <h3 id="cgamon_pic">CGAMON.PIC</h3>
     <table style="margin-left:auto; margin-right:auto; text-align:center;"><tbody>
@@ -243,12 +249,24 @@
         A: byte; { unknown }
         Tiles: array [1..8*20] of byte;
         Objects: array [1..8*20] of byte;
-        ...
+        MonsterId: byte;
+        MonsterCount: byte;
+        NorthRoom: byte;
+        EastRoom: byte;
+        SouthRoom: byte;
+        WestRoom: byte;
+        UpRoom: byte; { Destination of stairs up }
+        DownRoom: byte; { Destination of stairs down }
+        RoomId: byte;
+        B: byte;
+        C: byte;
+        D: byte;
         Name: string[26];
     end;</pre>
+    <p>For an interactive webpage, <a href="interactive/index.html">click here!</a></p>
 
     <h3 id="egamasks_pic">EGAMASKS.PIC</h3>
-    <p>Unused, not loaded by the game. Format is different than CGA or EGA, but still might be closer to <a href="#ega_pic_format">EGA</a> than anything. Could have been earlier versions of tile masks in <code>EGAPICS.PIC</code>, or maybe used for blending between two tiles (some of them put together in a 2x2 grid look like they form a circle?). Here's sorta what it looks like:</p>
+    <p><strong>Unused</strong>. Format is different than CGA or EGA, but still might be closer to <a href="#ega_pic_format">EGA</a> than anything. Could have been earlier versions of tile masks in <code>EGAPICS.PIC</code>, or maybe used for blending between two tiles (some of them put together in a 2x2 grid look like they form a circle?). Here's sorta what it looks like:</p>
     <div style="margin-left:auto; margin-right:auto; text-align:center;"><img alt="" src="egamasks.png"/></div>
 
     <h3 id="egapics_pic">EGAPICS.PIC</h3>
@@ -470,11 +488,11 @@
     
     <h3>CGA</h3>
     <div style="margin-left:auto; margin-right:auto; text-align:center;"><img alt="" src="explorer_015.png"/></div>
-    <p>CGA uses 2bit color. Monsters use <code>CGAMON.PIC</code>/<code>CGAMASK.PIC</code> and tiles use <code>CGAPICS.PIC</code>. CGA crashes trying to display monsters because <code>CGAMASK.PIC</code> is missing. Compared to EGA, there's less space for text at the bottom so neither the room name nor monster details are displayed.</p>
+    <p>CGA uses 2bit color. Monsters use <code>CGAMON.PIC</code>/<code>CGAMASK.PIC</code> and tiles use <code>CGAPICS.PIC</code>. CGA crashes trying to display monsters because <code>CGAMASK.PIC</code> is missing. Compared to EGA, there's less space for text at the bottom so neither the room name nor monster details are displayed. The menus use 320x200 test more. The main game uses 320x200 with double height and double width aspect ratio (rendered as 640x400).</p>
 
     <h3>EGA</h3>
     <div style="margin-left:auto; margin-right:auto; text-align:center;"><img alt="" src="explorer_016.png"/></div>
-    <p>EGA uses 4bit color. Monsters use <code>PYMON.PIC</code>/<code>PYMASK.PIC</code> and tiles use <code>EGAPICS.PIC</code>. The main game uses 640x200 with double-height aspect ratio (effectively 640x400).</p>
+    <p>EGA uses 4bit color. Monsters use <code>PYMON.PIC</code>/<code>PYMASK.PIC</code> and tiles use <code>EGAPICS.PIC</code>. The menus use 640x350 text mode. The main game uses 640x200 with double-height aspect ratio (rendered as 640x400).</p>
 
     <h2 id="cga_pic_format">CGA PIC Format</h2>
     <p>Each pixel is a half-nibble (2 bits) that corresponds to the CGA palette. Stored row-major. Pixels organized into 16x16 chunks, so they take 64 bytes (with half-nibble packing). The actual image is 15x15 so the top and right 1px sides are garbage and can be ignored. While each image only takes 64 bytes, they are aligned on the 256 byte boundary; everything between 64 and 256 are garbage and can be ignored.</p>
